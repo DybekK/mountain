@@ -114,21 +114,24 @@
     }
     
     .responsive-boxes h2 {
-        font-size: 2em;
+        font-size: 3em;
      opacity: 0;
     transition: 0.75s;
         transform: translateY(-100px);
     }
 
     .responsive-boxes p {
-        font-size: 1em;
+        font-size: 1.35em;
              opacity: 0;
       transition: 0.85s;
            transform: translateY(-100px);
     }
 
     .responsive-boxes a{
-        font-size:1em;
+        font-size:1.4em;
+                opacity: 0;
+      transition: 0.85s;
+           transform: translateY(-100px);
     }
 
     .box {
@@ -149,18 +152,7 @@
     }
 
 
-    .responsive-boxes h2 {
-        font-size: 3em;
-    }
-
-    .responsive-boxes p {
-        font-size: 1.35em;
-    }
-
-    .responsive-boxes a{
-        font-size:1.5em;
-    }
-
+    
     .box div{
         text-align: center;
 display: flex;
@@ -337,23 +329,41 @@ display: flex;
         padding: 4em;
     }
 
-    
-    
-    
-    
-    
-
-
-
     .boxes {
         font-size: 1.3em;
         margin-bottom: -31.8em;
 
     }
+}
 
 
+@media only screen and (max-width: 360px) {
+   #hero-text button {
+        margin-top: 1.8em;
+        font-size: 1.2em;
+    }
 
+    
+     .responsive-boxes h2 {
+        font-size: 2em;
+    }
 
+    .responsive-boxes p {
+        font-size: 1.23em;
+    }
 
+    .responsive-boxes a{
+        font-size:1.2em;
+    }
+  
+
+    #hero-text h1 {
+        font-size: 2.2em !important;
+    }
+
+    #hero-text h2 {
+        font-size: 1.2em !important;
+    }
+ 
 
 }

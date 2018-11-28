@@ -96,7 +96,7 @@
 
     <div id="responsive-boxes-animate" class="row responsive-boxes">
 
-        <div class="first-box box col-xs-12 ">
+        <div class="first-box box col-xs-12 container-text">
             <div>
                 <h2>Dream come true</h2>
                 <div class="hr-box"></div>
@@ -104,7 +104,7 @@
             </div>
 
         </div>
-        <div class="second-box box col-xs-12">
+        <div class="second-box box col-xs-12 container-text">
             <div>
                 <h2>Make experience</h2>
                 <div class="hr-box"></div>
@@ -137,7 +137,7 @@
             var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
             var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
             var hrBox = document.getElementsByClassName("hr-box");
-            
+            var aBox = document.getElementById("responsive-boxes-animate").querySelector("a");
             setTimeout(function() {
                 rightPanel.style.opacity = 1;
                 boxes.style.opacity = 1;
@@ -155,8 +155,8 @@
                 }
             }, 1200);
 
-            
-                     setTimeout(function() {
+
+            setTimeout(function() {
                 for (var i = 0; i < 3; i++) {
                     for (var i = 0; i < 3; i++) {
                         hrBox[i].style.transform = "translateY(0px)";
@@ -164,14 +164,16 @@
                     }
                 }
             }, 1400);
-            
-            
-            
+
+
+
             setTimeout(function() {
+
                 for (var i = 0; i < 3; i++) {
                     respoBoxesP[i].style.transform = "translateY(0px)";
                     respoBoxesP[i].style.opacity = 1;
                 }
+
             }, 1700);
             // tutaj koniec przykladu 
 
@@ -188,6 +190,8 @@
             setTimeout(function() {
                 heroTextH2.style.transform = "translateY(0px)";
                 heroTextH2.style.opacity = 1;
+                aBox.style.transform = "translateY(0px)";
+                aBox.style.opacity = 1;
             }, 1800);
 
             setTimeout(function() {
