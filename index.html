@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta lang="pl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projekt</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
+    <link href="css/flexboxgrid.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+</head>
+
+<body>
+    <section id="hero">
+        <div class="button-responsive">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="left-panel">
+            <div id="navbar-animate" class="navbar">
+                <div><a id="first-a" href="#">Home</a></div>
+                <div><a href="#">Book a tour</a></div>
+                <div><a href="#">Training</a></div>
+                <div><a href="#">Contact</a></div>
+
+            </div>
+
+
+            <div id="hero-text">
+
+                <h1>JOIN THE TRAVEL</h1>
+                <div id="hr-text" class="hr"></div>
+
+                <h2>Let your adventure begin</h2>
+                <button id="button-show-more"><img src="images/hero/right-arrow.svg">Show more</button>
+
+
+
+            </div>
+
+            <div id="text-box-border"></div>
+            <div id="boxes-animate" class="row boxes">
+                <div class="arrow col-xs-12 col-md-1">
+                    <img src="images/hero/right-arrow.svg">
+                </div>
+                <div class="first-box box col-xs-12 col-sm-4">
+                    <div>
+                        <h2>Dream come true</h2>
+                        <p>Have you ever dreamed about wild adventure?</p>
+                    </div>
+
+                </div>
+                <div class="second-box box col-xs-12 col-sm-4">
+                    <div>
+                        <h2>Make experience</h2>
+                        <p>We will show you amazing experiences, get the highest top of mountains in the world.</p>
+                    </div>
+
+                </div>
+                <div class="third-box box col-xs-12 col-sm-3">
+                    <div>
+                        <h2>Book a tour</h2>
+                        <p>Check the nearest dates and set your trip, we wil provide you with equipment and security</p>
+                        <a href="#">READ MORE</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="right-panel">
+
+
+            <div class="limits-text">
+                <hr>
+                <h1>overcome limits</h1>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <div id="responsive-boxes-animate" class="row responsive-boxes">
+
+        <div class="first-box box col-xs-12 ">
+            <div>
+                <h2>Dream come true</h2>
+                <div class="hr-box"></div>
+                <p>Have you ever dreamed about wild adventure?</p>
+            </div>
+
+        </div>
+        <div class="second-box box col-xs-12">
+            <div>
+                <h2>Make experience</h2>
+                <div class="hr-box"></div>
+                <p>We will show you amazing experiences, get the highest top of mountains in the world.</p>
+            </div>
+
+        </div>
+        <div class="third-box box col-xs-12">
+            <div>
+                <h2>Book a tour</h2>
+                <div id="last-hr-box" class="hr-box"></div>
+                <p>Check the nearest dates and set your trip, we wil provide you with equipment and security</p>
+                <a href="#">READ MORE</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var rightPanel = document.getElementById("right-panel");
+            var textBorder = document.getElementById("text-box-border");
+            var boxes = document.getElementById("boxes-animate");
+            var heroTextH1 = document.getElementById("hero-text").querySelector("h1");
+            var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
+            var hrText = document.getElementById("hr-text");
+            var btn = document.getElementById("button-show-more");
+            var navbar = document.getElementById("navbar-animate");
+            var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
+            var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
+            var hrBox = document.getElementsByClassName("hr-box");
+            
+            setTimeout(function() {
+                rightPanel.style.opacity = 1;
+                boxes.style.opacity = 1;
+
+            }, 500);
+
+
+            // bede tutaj pozniej okreslal zachowanie respoBoxow w stosunku do przewijania ekranu
+            // tutaj poczatek przykladu
+
+            setTimeout(function() {
+                for (var i = 0; i < 3; i++) {
+                    respoBoxesH2[i].style.transform = "translateY(0px)";
+                    respoBoxesH2[i].style.opacity = 1;
+                }
+            }, 1200);
+
+            
+                     setTimeout(function() {
+                for (var i = 0; i < 3; i++) {
+                    for (var i = 0; i < 3; i++) {
+                        hrBox[i].style.transform = "translateY(0px)";
+                        hrBox[i].style.opacity = 1;
+                    }
+                }
+            }, 1400);
+            
+            
+            
+            setTimeout(function() {
+                for (var i = 0; i < 3; i++) {
+                    respoBoxesP[i].style.transform = "translateY(0px)";
+                    respoBoxesP[i].style.opacity = 1;
+                }
+            }, 1700);
+            // tutaj koniec przykladu 
+
+            setTimeout(function() {
+                textBorder.style.opacity = 1;
+            }, 1200);
+            setTimeout(function() {
+                heroTextH1.style.transform = "translateY(0px)";
+                heroTextH1.style.opacity = 1;
+                navbar.style.transform = "translate(0px)";
+                navbar.style.opacity = 1;
+            }, 1600);
+
+            setTimeout(function() {
+                heroTextH2.style.transform = "translateY(0px)";
+                heroTextH2.style.opacity = 1;
+            }, 1800);
+
+            setTimeout(function() {
+                hrText.style.transform = "translateY(0px)";
+                hrText.style.opacity = 1;
+                btn.style.transform = "translateY(0px)";
+                btn.style.opacity = 1;
+            }, 1700);
+
+
+
+        });
+    </script>
+</body>
+
+</html>

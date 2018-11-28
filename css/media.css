@@ -1,0 +1,359 @@
+﻿@media only screen and (max-width: 1639px) {
+    #hero-text .hr {
+        margin: 1em 0;
+        height: 5px;
+        border: 0;
+        width: 450px;
+        background-color: #fff;
+    }
+
+    .box div {
+        margin: 0;
+    }
+
+    .box h2 {
+        font-size: 1.2em;
+    }
+
+    .box p {
+        font-size: 0.8em;
+    }
+
+    #hero-text h1 {
+        font-size: 5em;
+        margin-top: 1em;
+    }
+
+    #text-box-border {
+        margin-top: 6em;
+        height: 46em;
+        width: 56em;
+    }
+
+    #hero-text {
+        margin-right: -2em;
+    }
+}
+
+@media only screen and (max-width: 1119px) {
+    .left-panel {
+        width: 100%;
+    }
+
+    #right-panel {
+        display: none;
+    }
+
+    #hero-text {
+        margin-right: -2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero-text h1 {
+        font-size: 5em;
+        margin-top: 1em;
+    }
+
+    #text-box-border {
+        display: none;
+    }
+
+    #hero-text .hr {
+        margin: 1em 0;
+        height: 5px;
+        border: 0;
+        width: 450px;
+        background-color: #fff;
+    }
+
+
+    #hero-text h2 {
+        font-size: 2.3em;
+    }
+
+    #hero-text button {
+        font-size: 1.4em;
+    }
+
+    .limits-text h1 {
+        width: 7em;
+    }
+
+
+    .box div {
+        margin: 0;
+    }
+
+    .box h2 {
+        font-size: 1.2em;
+    }
+
+    .box p {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .box h2::after {
+    display: none !important;
+}
+
+    .hr-box{
+        height: 2px;
+        width: 40%;
+        background-color: #fff;
+        margin: 0.5em 0 !important;
+             opacity: 0;
+    transition: 0.75s;
+        transform: translateY(-100px);
+    }
+
+    #last-hr-box{
+          background-color: #000;
+    }
+    
+    .responsive-boxes h2 {
+        font-size: 2em;
+     opacity: 0;
+    transition: 0.75s;
+        transform: translateY(-100px);
+    }
+
+    .responsive-boxes p {
+        font-size: 1em;
+             opacity: 0;
+      transition: 0.85s;
+           transform: translateY(-100px);
+    }
+
+    .responsive-boxes a{
+        font-size:1em;
+    }
+
+    .box {
+        text-align: center;
+
+    }
+
+    .second-box {
+
+        height: auto;
+        padding: 3em;
+        color: white;
+    }
+
+    .third-box {
+        height: auto;
+        padding: 3em;
+    }
+
+
+    .responsive-boxes h2 {
+        font-size: 3em;
+    }
+
+    .responsive-boxes p {
+        font-size: 1.35em;
+    }
+
+    .responsive-boxes a{
+        font-size:1.5em;
+    }
+
+    .box div{
+        text-align: center;
+display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+     .first-box {
+        color: white;
+        height: auto;
+        padding: 5em;
+
+    }
+    
+    
+    
+    .second-box {
+
+        height: auto;
+        padding: 4em;
+        color: white;
+    }
+
+    .third-box {
+        height: auto;
+        padding: 4em;
+    }
+
+
+    .boxes {
+        display: none !important;
+    }
+
+    .responsive-boxes {
+        display: flex !important;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+    }
+
+    .left-panel {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 804px) {
+    
+    
+    .boxes {
+        margin-bottom: -34em;
+    }
+
+    .navbar div {
+        font-size: 1.1em;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    #hero-text h1 {
+        font-size: 4em !important;
+    }
+
+    #hero-text h2 {
+        font-size: 2em !important;
+    }
+}
+
+@media only screen and (max-width: 643px) {
+
+   
+
+
+    
+
+
+    .button-responsive {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        padding: 0.5em;
+    }
+
+    #hero-text .hr {
+        margin: 1em 0;
+        height: 5px;
+        border: 0;
+        width: 250px !important;
+        background-color: #fff;
+    }
+
+
+
+    #hero-text {
+        margin: 0 !important;
+    }
+
+
+
+
+    #hero-text button {
+        margin-top: 1.8em;
+        font-size: 1.3em;
+    }
+
+    #hero {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #hero-text h1 {
+        font-size: 2.6em !important;
+    }
+
+    #hero-text h2 {
+        font-size: 1.5em !important;
+    }
+
+    .left-panel {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+     .responsive-boxes h2 {
+        font-size: 2.3em;
+    }
+
+    .responsive-boxes p {
+        font-size: 1.27em;
+    }
+
+    .responsive-boxes a{
+        font-size:1.3em;
+    }
+
+    .box div{
+        text-align: center;
+display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+     .first-box {
+        color: white;
+        height: auto;
+        padding: 5em;
+
+    }
+    
+    
+    
+    .second-box {
+
+        height: auto;
+        padding: 4em;
+        color: white;
+    }
+
+    .third-box {
+        height: auto;
+        padding: 4em;
+    }
+
+    
+    
+    
+    
+    
+
+
+
+    .boxes {
+        font-size: 1.3em;
+        margin-bottom: -31.8em;
+
+    }
+
+
+
+
+
+
+}
