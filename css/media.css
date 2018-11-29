@@ -1,4 +1,32 @@
 ﻿@media only screen and (max-width: 1639px) {
+    
+    
+
+
+
+#options div{
+    font-size: 2em;
+    display: flex;
+}
+
+#options a{
+   
+    color: black;
+    padding: 0.7em 0;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu{
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+}
+
     #hero-text .hr {
         margin: 1em 0;
         height: 5px;
@@ -21,9 +49,13 @@
 
     #hero-text h1 {
         font-size: 5em;
-        margin-top: 1em;
     }
 
+    
+    #hero-text button{
+        font-size: 1.3em;
+    }
+    
     #text-box-border {
         margin-top: 6em;
         height: 46em;
@@ -31,28 +63,41 @@
     }
 
     #hero-text {
-        margin-right: -2em;
+        margin-right: -3em;
     }
 }
 
 @media only screen and (max-width: 1119px) {
+    
+  
+   
+    
+    
+        #options a{
+    color: black;
+    padding: 0.5em 0;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+ 
+    
     .left-panel {
         width: 100%;
     }
-
-    #right-panel {
+   
+    #right-panel{
         display: none;
     }
-
+   
+    
     #hero-text {
-        margin-right: -2em;
         justify-content: center;
         align-items: center;
     }
 
     #hero-text h1 {
         font-size: 5em;
-        margin-top: 1em;
     }
 
     #text-box-border {
@@ -92,6 +137,11 @@
     .box p {
         font-size: 0.8em;
     }
+    
+    
+    
+  
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -191,10 +241,7 @@ display: flex;
         display: flex !important;
     }
 
-    .navbar {
-        position: absolute;
-        top: 0;
-    }
+  
 
     .left-panel {
         justify-content: center;
@@ -204,17 +251,12 @@ display: flex;
 @media only screen and (max-width: 804px) {
     
     
+
+
     .boxes {
         margin-bottom: -34em;
     }
 
-    .navbar div {
-        font-size: 1.1em;
-    }
-
-    .navbar {
-        justify-content: center;
-    }
 
     #hero-text h1 {
         font-size: 4em !important;
@@ -227,21 +269,11 @@ display: flex;
 
 @media only screen and (max-width: 643px) {
 
-   
 
 
-    
 
 
-    .button-responsive {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .hamburger {
-        padding: 0.5em;
-    }
-
+ 
     #hero-text .hr {
         margin: 1em 0;
         height: 5px;
@@ -268,9 +300,7 @@ display: flex;
         flex-direction: column;
     }
 
-    .navbar {
-        display: none;
-    }
+
 
     #hero-text h1 {
         font-size: 2.6em !important;
@@ -367,3 +397,40 @@ display: flex;
  
 
 }
+
+@media only screen and (max-width: 322px) {
+   #hero-text button {
+        margin-top: 1.8em;
+        font-size: 1.2em;
+    }
+
+    
+     .responsive-boxes h2 {
+        font-size: 2em;
+    }
+
+    .responsive-boxes p {
+        font-size: 1.23em;
+    }
+
+    .responsive-boxes a{
+        font-size:1.2em;
+    }
+  
+
+    #hero-text h1 {
+        font-size: 1.9em !important;
+    }
+    #hero-text .hr{
+        width: 200px !important;
+        height: 3px;
+    }
+    #hero-text h2 {
+        font-size: 1.2em !important;
+    }
+ 
+
+}
+
+
+

@@ -13,23 +13,41 @@
 </head>
 
 <body>
+    
+    
+    
+    <section id="navbar-section">
+       
+           <div id="navbar-animate">
+               <div id="menu">
+                      <div></div>
+                      <div></div>
+               </div>
+               <div id="options">
+                   <div><a id="first-a" href="#">Home</a></div>
+                <div><a href="#">Book a tour</a></div>
+                <div><a href="#">Training</a></div>
+                <div><a href="#">Contact</a></div>
+               
+               </div>
+            
+            </div>
+            <div class="navbar-image"></div>
+    </section>
+    
+
     <section id="hero">
-        <div class="button-responsive">
-            <div class="hamburger">
+        <div id="button-responsive">
+            <div id="hamburger">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </div>
         <div class="left-panel">
-            <div id="navbar-animate" class="navbar">
-                <div><a id="first-a" href="#">Home</a></div>
-                <div><a href="#">Book a tour</a></div>
-                <div><a href="#">Training</a></div>
-                <div><a href="#">Contact</a></div>
-
-            </div>
-
+            
+   
+         
 
             <div id="hero-text">
 
@@ -80,7 +98,7 @@
 
 
             <div class="limits-text">
-                <hr>
+               
                 <h1>overcome limits</h1>
 
             </div>
@@ -125,6 +143,143 @@
 
 
     <script>
+        
+        // animacja menu
+        
+          var btnOpen = document.getElementById("hamburger");
+          var sectionMenu = document.getElementById("navbar-section");
+        var btnClose = document.getElementById("menu");
+        var menuOptions = document.getElementById("options").querySelectorAll("div");
+        
+        
+        
+          btnOpen.addEventListener("click", function(){
+          
+              
+              btnOpen.style.opacity=0;
+              
+              if(btnClose.style.opacity==0){
+                     setTimeout(function() {
+                btnClose.style.opacity = 1;
+            }, 500);
+              }
+              
+              
+                    sectionMenu.style.display = "flex";
+                   
+              
+              setTimeout(function() {
+                sectionMenu.style.width = "100%";
+            }, 80);
+              
+              setTimeout(function() {
+                sectionMenu.style.opacity = 1;
+            }, 50);
+              
+              for(var i=0; i<4; i++){
+                  
+                  if(i == 0) {
+                             setTimeout(function() {
+                    menuOptions[0].style.opacity = 1;
+                  menuOptions[0].style.transform = "translateY(0px)";
+            }, 1150);
+            }
+            else if (i == 1){
+                
+                             setTimeout(function() {
+                    menuOptions[1].style.opacity = 1;
+                  menuOptions[1].style.transform = "translateY(0px)";
+            }, 1100);
+            }
+            else if (i == 2){
+                             setTimeout(function() {
+                    menuOptions[2].style.opacity = 1;
+                  menuOptions[2].style.transform = "translateY(0px)";
+            }, 1050);
+            }
+            else if (i == 3){
+                                setTimeout(function() {
+                    menuOptions[3].style.opacity = 1;
+                  menuOptions[3].style.transform = "translateY(0px)";
+            }, 1000);
+                
+            }
+                
+              }
+              
+            
+              
+              
+              
+
+              
+        });
+        
+            btnClose.addEventListener("click", function(){
+      
+                
+                   setTimeout(function() {
+            btnClose.style.opacity = 0;
+            }, 100);
+                
+                      for(var i=0; i<4; i++){
+                  
+                  if(i == 0) {
+                             setTimeout(function() {
+                    menuOptions[0].style.opacity = 0;
+                  menuOptions[0].style.transform = "translateY(100px)";
+            }, 800);  
+            } 
+            else if (i == 1){
+                
+                             setTimeout(function() {
+                    menuOptions[1].style.opacity = 0;
+                  menuOptions[1].style.transform = "translateY(100px)";
+            }, 850); 
+            }
+            else if (i == 2){
+                             setTimeout(function() {
+                    menuOptions[2].style.opacity = 0;
+                  menuOptions[2].style.transform = "translateY(100px)";
+            }, 900); 
+            }
+            else if (i == 3){
+                                setTimeout(function() {
+                    menuOptions[3].style.opacity = 0;
+                  menuOptions[3].style.transform = "translateY(100px)";
+            }, 950); 
+                
+            }
+                  
+              
+              }
+                
+                       
+                  setTimeout(function() {
+                     sectionMenu.style.display = "none";
+            }, 1700);
+       
+            
+                 setTimeout(function() {
+                       sectionMenu.style.width = "0%";
+                       
+            }, 1400);
+             
+                   setTimeout(function() {
+                sectionMenu.style.opacity = 0;
+                         btnOpen.style.opacity=1;
+            }, 1500);
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        // animacje tekstu i elementow na stronie
+        
         document.addEventListener("DOMContentLoaded", function() {
             var rightPanel = document.getElementById("right-panel");
             var textBorder = document.getElementById("text-box-border");
@@ -133,7 +288,6 @@
             var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
             var hrText = document.getElementById("hr-text");
             var btn = document.getElementById("button-show-more");
-            var navbar = document.getElementById("navbar-animate");
             var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
             var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
             var hrBox = document.getElementsByClassName("hr-box");
@@ -183,8 +337,7 @@
             setTimeout(function() {
                 heroTextH1.style.transform = "translateY(0px)";
                 heroTextH1.style.opacity = 1;
-                navbar.style.transform = "translate(0px)";
-                navbar.style.opacity = 1;
+                
             }, 1600);
 
             setTimeout(function() {
