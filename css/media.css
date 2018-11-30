@@ -49,15 +49,19 @@
 
     #hero-text h1 {
         font-size: 5em;
+        margin-top: 0.5em;
     }
 
+    #hero-text h2{
+        font-size: 2em;
+    }
 
     #hero-text button {
         font-size: 1.3em;
     }
 
     #text-box-border {
-        margin-top: 6em;
+        margin-top: 5.3em;
         height: 46em;
         width: 56em;
     }
@@ -94,6 +98,7 @@
     #hero-text {
         justify-content: center;
         align-items: center;
+        z-index: 1;
     }
 
     #hero-text h1 {
@@ -251,7 +256,9 @@
 @media only screen and (max-width: 804px) {
 
 
-
+    .navbar-image{
+        display: none;
+    }
 
     .boxes {
         margin-bottom: -34em;
@@ -318,6 +325,9 @@
 
 @media only screen and (max-width: 414px) {
 
+    
+  
+    
     .responsive-boxes h2 {
         font-size: 2.3em;
     }
@@ -373,6 +383,11 @@
         font-size: 1.2em;
     }
 
+    
+      #options a{
+        font-size: 0.7em;
+    }
+    
 
     .responsive-boxes h2 {
         font-size: 2em;
