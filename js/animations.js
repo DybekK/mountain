@@ -9,7 +9,7 @@
 
         btnOpen.addEventListener("click", function() {
 
-            body.style.overflow = "hidden";
+            body.style.overflowY = "hidden";
             btnOpen.style.opacity = 0;
 
             if (btnClose.style.opacity == 0) {
@@ -106,6 +106,7 @@
             setTimeout(function() {
                 sectionMenu.style.display = "none";
                  body.style.overflowY = "scroll";
+                 
             btnOpen.style.opacity = 1;
 
             }, 1700);
