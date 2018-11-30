@@ -105,7 +105,7 @@
 
             setTimeout(function() {
                 sectionMenu.style.display = "none";
-                 body.style.overflowY = "scroll";
+                 body.style.overflowY = "visible";
                  
             btnOpen.style.opacity = 1;
 
