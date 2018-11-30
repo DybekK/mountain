@@ -12,9 +12,12 @@
             body.style.overflowY = "hidden";
             btnOpen.style.opacity = 0;
 
-            if (btnClose.style.opacity == 0) {
+            if (btnClose.querySelector("div").style.opacity == 0) {
                 setTimeout(function() {
-                    btnClose.style.opacity = 1;
+                  
+                      btnClose.querySelectorAll("div")[0].style.transform = "rotate(45deg)"; btnClose.querySelectorAll("div")[0].style.opacity = 1;
+                     btnClose.querySelectorAll("div")[1].style.transform = "rotate(-45deg)"; btnClose.querySelectorAll("div")[1].style.opacity = 1;
+                
                 }, 500);
             }
 
@@ -70,7 +73,15 @@
 
 
             setTimeout(function() {
-                btnClose.style.opacity = 0;
+                
+                
+                for(var i = 0; i <2; i++){
+                      btnClose.querySelectorAll("div")[i].style.transform = "rotate(0deg)"; btnClose.querySelectorAll("div")[i].style.opacity = 0;
+                }
+                
+                
+                btnClose.style.transform = "rotate(0deg)";
+              
             }, 100);
 
             for (var i = 0; i < 4; i++) {

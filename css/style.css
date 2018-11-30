@@ -27,20 +27,10 @@ body{
     height: 2px;
     border-radius: 1em;
     background-color: #fff;
+       width: 35px;
 }
 
-#hamburger div:first-child {
-    width: 50px;
 
-}
-
-#hamburger div:nth-child(2) {
-    width: 40px;
-}
-
-#hamburger div:nth-child(3) {
-    width: 30px;
-}
 
 
 
@@ -204,7 +194,6 @@ p {
     cursor: pointer;
     height: 55px;
     width: 55px;
-    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,24 +202,26 @@ p {
 }
 
 #menu div {
+        opacity: 0;
     height: 2px;
     width: 45px;
     background-color: black;
     position: absolute;
+    transition: 0.5s;
 }
 
 #menu div:first-child {
     height: 2px;
 
     background-color: black;
-    transform: rotate(45deg);
+ 
 }
 
 #menu div:last-child {
     height: 2px;
 
     background-color: black;
-    transform: rotate(135deg);
+    
 }
 
 .navbar-image {
