@@ -1,31 +1,31 @@
 ﻿@media only screen and (max-width: 1639px) {
-    
-    
 
 
 
-#options div{
-    font-size: 2em;
-    display: flex;
-}
 
-#options a{
-   
-    color: black;
-    padding: 0.7em 0;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
 
-.menu{
-    cursor: pointer;
-    height: 55px;
-    width: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5em 0;
-}
+    #options div {
+        font-size: 2em;
+        display: flex;
+    }
+
+    #options a {
+
+        color: black;
+        padding: 0.7em 0;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+
+    .menu {
+        cursor: pointer;
+        height: 55px;
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0;
+    }
 
     #hero-text .hr {
         margin: 1em 0;
@@ -51,11 +51,11 @@
         font-size: 5em;
     }
 
-    
-    #hero-text button{
+
+    #hero-text button {
         font-size: 1.3em;
     }
-    
+
     #text-box-border {
         margin-top: 6em;
         height: 46em;
@@ -68,29 +68,29 @@
 }
 
 @media only screen and (max-width: 1119px) {
-    
-  
-   
-    
-    
-        #options a{
-    color: black;
-    padding: 0.5em 0;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
 
- 
-    
+
+
+
+
+    #options a {
+        color: black;
+        padding: 0.5em 0;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+
+
+
     .left-panel {
         width: 100%;
     }
-   
-    #right-panel{
+
+    #right-panel {
         display: none;
     }
-   
-    
+
+
     #hero-text {
         justify-content: center;
         align-items: center;
@@ -137,51 +137,51 @@
     .box p {
         font-size: 0.8em;
     }
-    
-    
-    
-  
+
+
+
+
 
 }
 
 @media only screen and (max-width: 991px) {
     .box h2::after {
-    display: none !important;
-}
+        display: none !important;
+    }
 
-    .hr-box{
+    .hr-box {
         height: 2px;
         width: 40%;
         background-color: #fff;
         margin: 0.5em 0 !important;
-             opacity: 0;
-    transition: 0.75s;
+        opacity: 0;
+        transition: 0.75s;
         transform: translateY(-100px);
     }
 
-    #last-hr-box{
-          background-color: #000;
+    #last-hr-box {
+        background-color: #000;
     }
-    
+
     .responsive-boxes h2 {
         font-size: 3em;
-     opacity: 0;
-    transition: 0.75s;
+        opacity: 0;
+        transition: 0.75s;
         transform: translateY(-100px);
     }
 
     .responsive-boxes p {
         font-size: 1.35em;
-             opacity: 0;
-      transition: 0.85s;
-           transform: translateY(-100px);
+        opacity: 0;
+        transition: 0.85s;
+        transform: translateY(-100px);
     }
 
-    .responsive-boxes a{
-        font-size:1.4em;
-                opacity: 0;
-      transition: 0.85s;
-           transform: translateY(-100px);
+    .responsive-boxes a {
+        font-size: 1.4em;
+        opacity: 0;
+        transition: 0.85s;
+        transform: translateY(-100px);
     }
 
     .box {
@@ -202,24 +202,24 @@
     }
 
 
-    
-    .box div{
+
+    .box div {
         text-align: center;
-display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    
-     .first-box {
+
+    .first-box {
         color: white;
         height: auto;
         padding: 5em;
 
     }
-    
-    
-    
+
+
+
     .second-box {
 
         height: auto;
@@ -241,7 +241,7 @@ display: flex;
         display: flex !important;
     }
 
-  
+
 
     .left-panel {
         justify-content: center;
@@ -249,8 +249,8 @@ display: flex;
 }
 
 @media only screen and (max-width: 804px) {
-    
-    
+
+
 
 
     .boxes {
@@ -273,7 +273,7 @@ display: flex;
 
 
 
- 
+
     #hero-text .hr {
         margin: 1em 0;
         height: 5px;
@@ -318,7 +318,7 @@ display: flex;
 
 @media only screen and (max-width: 414px) {
 
-     .responsive-boxes h2 {
+    .responsive-boxes h2 {
         font-size: 2.3em;
     }
 
@@ -326,27 +326,27 @@ display: flex;
         font-size: 1.27em;
     }
 
-    .responsive-boxes a{
-        font-size:1.3em;
+    .responsive-boxes a {
+        font-size: 1.3em;
     }
 
-    .box div{
+    .box div {
         text-align: center;
-display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    
-     .first-box {
+
+    .first-box {
         color: white;
         height: auto;
         padding: 5em;
 
     }
-    
-    
-    
+
+
+
     .second-box {
 
         height: auto;
@@ -368,13 +368,13 @@ display: flex;
 
 
 @media only screen and (max-width: 360px) {
-   #hero-text button {
+    #hero-text button {
         margin-top: 1.8em;
         font-size: 1.2em;
     }
 
-    
-     .responsive-boxes h2 {
+
+    .responsive-boxes h2 {
         font-size: 2em;
     }
 
@@ -382,10 +382,10 @@ display: flex;
         font-size: 1.23em;
     }
 
-    .responsive-boxes a{
-        font-size:1.2em;
+    .responsive-boxes a {
+        font-size: 1.2em;
     }
-  
+
 
     #hero-text h1 {
         font-size: 2.2em !important;
@@ -394,18 +394,18 @@ display: flex;
     #hero-text h2 {
         font-size: 1.2em !important;
     }
- 
+
 
 }
 
 @media only screen and (max-width: 322px) {
-   #hero-text button {
+    #hero-text button {
         margin-top: 1.8em;
         font-size: 1.2em;
     }
 
-    
-     .responsive-boxes h2 {
+
+    .responsive-boxes h2 {
         font-size: 2em;
     }
 
@@ -413,24 +413,23 @@ display: flex;
         font-size: 1.23em;
     }
 
-    .responsive-boxes a{
-        font-size:1.2em;
+    .responsive-boxes a {
+        font-size: 1.2em;
     }
-  
+
 
     #hero-text h1 {
         font-size: 1.9em !important;
     }
-    #hero-text .hr{
+
+    #hero-text .hr {
         width: 200px !important;
         height: 3px;
     }
+
     #hero-text h2 {
         font-size: 1.2em !important;
     }
- 
+
 
 }
-
-
-
