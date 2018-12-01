@@ -150,7 +150,7 @@
             var heroTextH1 = document.getElementById("hero-text").querySelector("h1");
             var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
             var hrText = document.getElementById("hr-text");
-            var btn = document.getElementById("button-show-more");
+            var btn = document.getElementsByClassName("button-show-more");
             var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
             var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
             var hrBox = document.getElementsByClassName("hr-box");
@@ -213,8 +213,8 @@
             setTimeout(function() {
                 hrText.style.transform = "translateY(0px)";
                 hrText.style.opacity = 1;
-                btn.style.transform = "translateY(0px)";
-                btn.style.opacity = 1;
+                btn[0].style.transform = "translateY(0px)";
+                btn[0].style.opacity = 1;
             }, 1700);
 
 

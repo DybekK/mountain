@@ -150,6 +150,20 @@
 }
 
 @media only screen and (max-width: 991px) {
+    
+    
+    .container-text {
+          margin-right: auto;
+  margin-left: auto;
+  padding-right: 15rem;
+  padding-left: 15rem;
+    }
+    
+    
+    .social-media{
+        display: none;
+    }
+    
     .box h2::after {
         display: none !important;
     }
@@ -157,20 +171,18 @@
     .hr-box {
         height: 2px;
         width: 40%;
-        background-color: #fff;
+        background-color: #000;
         margin: 0.5em 0 !important;
         opacity: 0;
         transition: 0.75s;
         transform: translateY(-100px);
     }
 
-    #last-hr-box {
-        background-color: #000;
-    }
 
     .responsive-boxes h2 {
         font-size: 3em;
         opacity: 0;
+        color: black;
         transition: 0.75s;
         transform: translateY(-100px);
     }
@@ -178,6 +190,7 @@
     .responsive-boxes p {
         font-size: 1.35em;
         opacity: 0;
+         color: black;
         transition: 0.85s;
         transform: translateY(-100px);
     }
@@ -191,51 +204,26 @@
 
     .box {
         text-align: center;
-
+           height: auto;
+        padding: 2em 0;
     }
 
-    .second-box {
+   
 
-        height: auto;
-        padding: 3em;
-        color: white;
-    }
-
-    .third-box {
-        height: auto;
-        padding: 3em;
-    }
+  
 
 
 
     .box div {
+        background-color: 
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+          
     }
 
 
-    .first-box {
-        color: white;
-        height: auto;
-        padding: 5em;
-
-    }
-
-
-
-    .second-box {
-
-        height: auto;
-        padding: 4em;
-        color: white;
-    }
-
-    .third-box {
-        height: auto;
-        padding: 4em;
-    }
 
 
     .boxes {
@@ -247,14 +235,33 @@
     }
 
 
-
     .left-panel {
         justify-content: center;
     }
 }
 
+
+
+@media only screen and (max-width: 922px) {
+   
+  .container-text {
+      
+  padding-right: 10rem;
+  padding-left: 10rem;
+    }
+    
+}
+
+
+
+
 @media only screen and (max-width: 804px) {
     
+    .container-text{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+   
     
     #hamburger{
         justify-content: center;
@@ -289,7 +296,12 @@
 
 @media only screen and (max-width: 643px) {
 
-
+.container-text {
+      
+  padding-right: 0rem;
+  padding-left: 0rem;
+    }
+    
 
 
 
