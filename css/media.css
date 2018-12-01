@@ -51,7 +51,7 @@
         margin-top: 0.5em;
     }
 
-    #hero-text h2{
+    #hero-text h2 {
         font-size: 2em;
     }
 
@@ -71,8 +71,81 @@
 }
 
 @media only screen and (max-width: 1249px) {
+    #job-offers-animation{
+        height: 36em;
+    }
+    .community {
+        height: 36em;
+    }
 
+    .job {
+        height: 36em;
+    }
 
+    .job .com-block {
+
+        height: 36em;
+
+    }
+
+    .community .com-block {
+
+        height: 36em;
+    }
+
+    .button-click {
+        height: 2.5em;
+        width: 2.5em;
+    }
+
+    .button-click:after {
+        height: 3em;
+        width: 3em;
+    }
+
+    .community h1 ,.job h1{
+        font-size: 1.8em !important;
+    }
+    
+    .community h2 ,.job h2{
+        font-size: 1.15em !important;
+    }
+    
+    .button-offers{
+        font-size: 1em !important;
+        margin-top: 1em;
+    }
+    
+    
+    #first-text:hover .button-click-blue::after {
+        height: 2.3em;
+        width: 2.3em;
+
+    }
+
+    #second-text:hover .button-click-green::after {
+        height: 2.3em;
+        width: 2.3em;
+
+    }
+
+    #third-text:hover .button-click-orange::after {
+        height: 2.3em;
+        width: 2.3em;
+
+    }
+
+    .about-us-text h1 {
+        font-size: 3.5em;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.5em;
+    }
+
+    .about-us-text p {
+        font-size: 1em;
+    }
 
 
 
@@ -98,7 +171,7 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
-         width: inherit;
+        width: inherit;
     }
 
     #hero-text h1 {
@@ -150,39 +223,37 @@
 }
 
 @media only screen and (max-width: 991px) {
-    
-    
+
+
     .container-text {
-          margin-right: auto;
-  margin-left: auto;
-  padding-right: 15rem;
-  padding-left: 15rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15rem;
+        padding-left: 15rem;
     }
-    
-    
-    .social-media{
+
+
+
+    .box {
+        margin: 1.4em 0;
+    }
+
+    .social-media {
         display: none;
     }
-    
+
     .box h2::after {
         display: none !important;
     }
 
-    .hr-box {
-        height: 2px;
-        width: 40%;
-        background-color: #000;
-        margin: 0.5em 0 !important;
-        opacity: 0;
-        transition: 0.75s;
-        transform: translateY(-100px);
-    }
+
 
 
     .responsive-boxes h2 {
         font-size: 3em;
         opacity: 0;
         color: black;
+
         transition: 0.75s;
         transform: translateY(-100px);
     }
@@ -190,9 +261,11 @@
     .responsive-boxes p {
         font-size: 1.35em;
         opacity: 0;
-         color: black;
+        width: 18em;
+        color: black;
         transition: 0.85s;
-        transform: translateY(-100px);
+        margin: 1.8em 0;
+
     }
 
     .responsive-boxes a {
@@ -203,24 +276,23 @@
     }
 
     .box {
-        text-align: center;
-           height: auto;
+        height: auto;
         padding: 2em 0;
     }
 
-   
 
-  
+
+
 
 
 
     .box div {
-        background-color: 
-        text-align: center;
+        background-color:
+            text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-          
+
     }
 
 
@@ -243,40 +315,122 @@
 
 
 @media only screen and (max-width: 922px) {
-   
-  .container-text {
-      
-  padding-right: 10rem;
-  padding-left: 10rem;
+     
+    
+     #job-offers-animation{
+        height: 30em;
+    }
+    .community {
+        height: 30em;
+    }
+
+    .job {
+        height: 30em;
+    }
+
+    .job .com-block {
+
+        height: 30em;
+
+    }
+
+    .community .com-block {
+
+        height: 30em;
+    }
+
+    .com-block h1{
+        font-size: 1.6em !important;
     }
     
+        .com-block h2{
+        font-size: 1.1em !important;
+            margin-bottom: 1.2em;
+    }
+    
+    
+    .container-text {
+
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+
+}
+
+
+.slider-image {
+    width: 24em;
 }
 
 
 
 
 @media only screen and (max-width: 804px) {
+
+
+
+    .responsive-boxes h2 {
+        font-size: 2.5em;
+    }
+
+    .responsive-boxes p {
+        font-size: 1.25em;
+
+    }
+
+    .responsive-boxes a {
+        font-size: 1.4em;
+
+    }
+
+ 
     
-    .container-text{
+        .com-block h2{
+        font-size: 1.1em !important;
+            margin-bottom: 2em;
+    }
+
+
+
+    .slider-image {
+        width: 21em;
+    }
+
+
+    .about-us-text h1 {
+        font-size: 3em;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.1em;
+    }
+
+    .about-us-text p {
+        font-size: 0.9em;
+    }
+
+
+
+    .container-text {
         padding-left: 2rem !important;
         padding-right: 2rem !important;
     }
-   
-    
-    #hamburger{
+
+
+    #hamburger {
         justify-content: center;
     }
-    
-    #hamburger div{
+
+    #hamburger div {
         margin: 0.2em;
-           width: 25px;
+        width: 25px;
     }
-    
 
 
 
 
-    .navbar-image{
+
+    .navbar-image {
         display: none;
     }
 
@@ -294,14 +448,71 @@
     }
 }
 
-@media only screen and (max-width: 643px) {
-
-.container-text {
-      
-  padding-right: 0rem;
-  padding-left: 0rem;
+@media only screen and (max-width: 672px) {
+    
+    
+      #job-offers{
+        flex-direction: column;
+    }
+ 
+      #job-offers-animation{
+        height: 60em;
     }
     
+    
+    .community{
+        width: 100%;
+    }
+    
+    .job{
+        width: 100%;
+    }
+    
+    #job-offers h1{
+        font-size: 2.7em !important;
+    }
+    
+     #job-offers h2{
+        font-size: 1.5em !important;
+         margin-bottom: 0;
+    }
+    
+    #job-offers .button-offers{
+        font-size: 1.6em !important;
+    }
+    .slider-image {
+        display: none;
+    }
+
+    #text-column {
+        margin-left: 2em;
+    }
+
+
+    .about-us-text h1 {
+        font-size: 4em;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.5em;
+    }
+
+    .about-us-text p {
+        font-size: 1.3em;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 643px) {
+
+    .container-text {
+
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
 
 
 
@@ -314,7 +525,7 @@
         background-color: #fff;
     }
 
-
+  
 
     #hero-text {
         margin: 0 !important;
@@ -332,7 +543,7 @@
         flex-direction: column;
     }
 
-
+  
 
     #hero-text h1 {
         font-size: 2.6em !important;
@@ -344,15 +555,41 @@
 
     .left-panel {
         justify-content: center;
-        width: 100%;
+        
     }
 }
-
+@media only screen and (max-width: 552px){
+    
+      #job-offers h1{
+        font-size: 2em !important;
+    }
+    
+     #job-offers h2{
+        font-size: 1em !important;
+         margin-bottom: 0;
+    }
+    
+    #job-offers .button-offers{
+        font-size: 1.2em !important;
+    }
+    
+}
 @media only screen and (max-width: 414px) {
 
+      #job-offers h1{
+        font-size: 1.8em !important;
+    }
     
-  
+     #job-offers h2{
+        font-size: 1em !important;
+         margin-bottom: 0;
+    }
     
+    #job-offers .button-offers{
+        font-size: 1em !important;
+    }
+
+
     .responsive-boxes h2 {
         font-size: 2.3em;
     }
@@ -399,20 +636,42 @@
         margin-bottom: -31.8em;
 
     }
+    
+     .about-us-text h1 {
+        font-size: 3em;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.3em;
+    }
+
+    .about-us-text p {
+        font-size: 1em;
+    }
+    
+    
 }
 
 
 @media only screen and (max-width: 360px) {
+    #job-offers h1{
+        font-size: 1.4em !important;
+    }
+      #job-offers h2{
+        font-size: 1em !important;
+         margin: 3em 0;
+    }
+    
     #hero-text button {
         margin-top: 1.8em;
         font-size: 1.2em;
     }
 
-    
-      #options a{
+
+    #options a {
         font-size: 0.7em;
     }
-    
+
 
     .responsive-boxes h2 {
         font-size: 2em;

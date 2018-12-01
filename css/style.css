@@ -15,31 +15,54 @@ body {
     display: flex;
     color: white;
 }
-.button-noanimated{
-        font-size: 1.4em;
-    padding: 0.8em 1.8em;
-    border-radius: 100px;
-    background-color: transparent;
-    color: white;
+#job-offers .button-offers{
+font-size: 1.3em;
+    padding: 0.8em 1.2em;
+    border-radius: 40px;
+    border: 1px solid white;
     cursor: pointer;
-    border:  2px solid white;
+        transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-100px);
 }
 
-#job-offers h1{
-    font-size: 2.3em;
-       margin: 1em 0;
-}
-
-#job-offers h2{
-    margin: 1em 0;
-    width: 65%;
-}
-
-.community div:hover, .job div:hover{
-    background-color: rgba( 0, 0, 0, 0.712 );
+#job-offers .button-offers:hover{
+    background-color: white;
+    color: black;
     transition: 0.5s;
 }
 
+#job-offers h1{
+    opacity: 0;
+     height: 2em;
+    font-size: 2em;
+    transition: 0.5s;
+    transform: translateY(-100px);
+}
+
+#job-offers h2{
+        opacity: 0;
+    font-size: 1.3em;
+      height: 6em;
+    width: 65%;
+     transition: 0.5s;
+      transform: translateY(-100px);
+}
+
+
+
+
+.com-block.com-block-hover{
+    display: flex;
+}
+      
+.com-block.com-block-hover:hover{
+      background-color: rgba( 0, 0, 0, 0.712 );
+    transition: 0.5s;
+}
+
+
+      
 
 
 .community{
@@ -49,27 +72,29 @@ body {
     background-size: cover;
     width: 50%;
 }
-.community div{
+.community .com-block{
        transition: 0.5s;
-    background-color:#191919;
+    background-color:black;
     width: 100%;
       height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 
-.job div{
+.job .com-block{
        transition: 0.5s;
-        background-color:#191919;
+        background-color:black;
     width: 100%;
     height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -149,19 +174,28 @@ body {
 
 .about-us-text h1 {
     font-size: 4em;
-    margin: 0.5em 0;
+    padding: 0.5em 0;
+    transition: 0.5s;
+    transform: translateY(-100px);
+      opacity: 0;
 }
 
 .about-us-text h2 {
     font-size: 2em;
     width: 13em;
     margin: 0.5em 0;
+     transition: 0.5s;
+    transform: translateY(-100px);
+    opacity: 0;
 }
 
 .about-us-text p {
     font-size: 1.3em;
     width: 16em;
     margin: 0.5em 0;
+     transition: 0.5s;
+    transform: translateY(-100px);
+      opacity: 0;
 }
 
 .button-click {
@@ -173,8 +207,22 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.5s;
 }
+
+#job-offers-animation{
+    position: absolute;
+    width: 100%;
+    height: 40em;
+    z-index: 2;
+    right: 0;
+    background-color: #202020;
+   transition: 0.8s;
+    transition-timing-function:ease-in;
+}
+
 
 .button-click::after {
     content: " ";
@@ -226,7 +274,7 @@ body {
 
 
 
-.text-column {
+#text-column {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -243,6 +291,7 @@ body {
 #hamburger {
     height: 36px;
     width: 50px;
+  
     cursor: pointer;
     transition: 0.6s;
     padding: 0.5em;
