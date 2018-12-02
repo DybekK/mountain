@@ -620,6 +620,11 @@
     }
 }
 @media only screen and (max-width: 552px){
+    #presentation {
+        margin: 2.4em 0 7em 0;
+    }
+    
+    
     #hero h1{
         font-size: 2.2em !important;
     
