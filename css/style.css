@@ -1,7 +1,14 @@
-﻿html {
+﻿
 
+html {
     overflow-x: hidden;
 }
+
+#overflow{
+    overflow-x: hidden;
+      position: relative;
+}
+
 
 body {
     margin: 0;
@@ -732,7 +739,7 @@ margin: 1.4em 0;
 
 h2 .animation-text-slide{
     position: absolute;
-    width: 700px;
+    width: 1000px;
     
     height: 70px;
     transition: 1s;
@@ -741,8 +748,8 @@ h2 .animation-text-slide{
 
 h1 .animation-text-slide{
     position: absolute;
-    width: 800px;
-    
+    width: auto;
+    width: 1000px;
     height: 110px;
     transition: 1s;
     background-color: white;
