@@ -2,11 +2,17 @@
 
 
     #presentation h2{
-        font-size: 3em;
+        font-size: 2.6em;
     }
     
+    
+    #presentation {
+        margin: 2em 0;
+    }
+    
+    
       #presentation h1{
-        font-size: 4.2em;
+        font-size: 3.3em;
     }
     
       #presentation h3{
@@ -658,7 +664,11 @@
     }
 }
 
-
+@media only screen and (max-width: 414px){
+    #presentation h3{
+        margin-top: 0.9em !important;
+    }
+}
 @media only screen and (max-width: 414px) {
 
     
