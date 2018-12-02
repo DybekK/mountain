@@ -5,6 +5,100 @@
  var btnClose = document.getElementById("menu");
  var menuOptions = document.getElementById("options").querySelectorAll("div");
  var body = document.body;
+ var whiteHamburger = document.getElementsByClassName("white-hamburger");
+var blackHamburger = document.getElementsByClassName("black-hamburger");
+ var hamburger = btnOpen.querySelectorAll("div");
+
+ var btn = document.getElementsByClassName("button-show-more");
+ var hero = document.getElementById("hero");
+ var html = document.getElementsByTagName("HTML")[0];
+ var overflow = document.getElementById("overflow");
+
+ //zmienne hero 
+
+ var rightPanel = document.getElementById("right-panel");
+ var boxes = document.getElementById("boxes-animate");
+ var heroTextH1 = document.getElementById("hero-text").querySelector("h1");
+ var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
+ var hrText = document.getElementById("hr-text");
+ // var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
+ // var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
+ //var aBox = document.getElementById("responsive-boxes-animate").querySelector("a");
+
+
+ // Zmienne about us
+
+ var aboutH1 = document.getElementById("text-column").querySelectorAll("h1");
+ var aboutH2 = document.getElementById("text-column").querySelectorAll("h2");
+ var aboutP = document.getElementById("text-column").querySelectorAll("p");
+ var aboutBtn = document.getElementById("text-column").getElementsByClassName("button-click");
+
+ // Zmienne job
+
+ var jobOffersBlock = document.getElementById("job-offers-animation");
+ var jobOffersH1 = document.getElementById("job-offers").querySelectorAll("h1");
+ var jobOffersH2 = document.getElementById("job-offers").querySelectorAll("h2");
+ var jobOffersBtn = document.getElementById("job-offers").getElementsByClassName("button-offers");
+ var jobOffersHover = document.getElementsByClassName("com-block");
+
+ //zmienne loading screen
+ var loadingScreen = document.getElementById("loading");
+ var loadingCube = document.getElementsByClassName("spinner");
+ var socialMedia = document.getElementsByClassName("social-media");
+
+ //zmienne presentation
+ var image = document.getElementsByClassName("image-in");
+ var presentH2 = document.getElementById("presentation").querySelector("h2");
+ var textSlide = document.getElementsByClassName("animation-text-slide");
+ var presentSpan = document.querySelectorAll("span");
+ var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
+
+
+
+
+
+ btn[0].addEventListener("click", function () {
+     setTimeout(function () {
+         rightPanel.style.opacity = 0;
+         boxes.style.opacity = 0;
+         socialMedia[0].style.opacity = 0;
+     }, 1000);
+
+
+     setTimeout(function () {
+         heroTextH1.style.opacity = 0;
+
+     }, 1000);
+
+     setTimeout(function () {
+         heroTextH2.style.opacity = 0;
+
+     }, 1000);
+
+     setTimeout(function () {
+
+         hrText.style.opacity = 0;
+
+         btn[0].style.opacity = 0;
+     }, 1000);
+
+     setTimeout(function () {
+
+         hero.style.height = 0;
+
+     }, 1800);
+
+
+     setTimeout(function () {
+         overflow.style.overflowY = "visible";
+         html.style.overflowY = "visible";
+
+
+     }, 2000);
+
+
+
+ });
 
 
  btnOpen.addEventListener("click", function () {
@@ -147,35 +241,6 @@
  // animacje tekstu i elementow na stronie
 
  document.addEventListener("DOMContentLoaded", function () {
-     var rightPanel = document.getElementById("right-panel");
-     var boxes = document.getElementById("boxes-animate");
-     var heroTextH1 = document.getElementById("hero-text").querySelector("h1");
-     var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
-     var hrText = document.getElementById("hr-text");
-     var btn = document.getElementsByClassName("button-show-more");
-    // var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
-    // var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
-     //var aBox = document.getElementById("responsive-boxes-animate").querySelector("a");
-
-     // Zmienne about us
-
-     var aboutH1 = document.getElementById("text-column").querySelectorAll("h1");
-     var aboutH2 = document.getElementById("text-column").querySelectorAll("h2");
-     var aboutP = document.getElementById("text-column").querySelectorAll("p");
-     var aboutBtn = document.getElementById("text-column").getElementsByClassName("button-click");
-     var jobOffersBlock = document.getElementById("job-offers-animation");
-     var jobOffersH1 = document.getElementById("job-offers").querySelectorAll("h1");
-     var jobOffersH2 = document.getElementById("job-offers").querySelectorAll("h2");
-     var jobOffersBtn = document.getElementById("job-offers").getElementsByClassName("button-offers");
-     var jobOffersHover = document.getElementsByClassName("com-block");
-     var loadingScreen = document.getElementById("loading");
-     var loadingCube = document.getElementsByClassName("spinner");
-     var socialMedia = document.getElementsByClassName("social-media");
-     var image = document.getElementsByClassName("image");
-     var presentH2 = document.getElementById("presentation").querySelector("h2");
-    var textSlide = document.getElementsByClassName("animation-text-slide");
-     var presentSpan = document.querySelectorAll("span");
-   var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
 
 
 
@@ -184,93 +249,99 @@
      setInterval(function () {
          var fullHeight = window.pageYOffset + window.innerHeight;
 
+         //HAMBURGER
+
+   
+
+        
+
 
 
          // RESPONSYWNE 
-/*
-         if (fullHeight >= respoBoxesH2[0].offsetTop) {
-             setTimeout(function () {
-                 respoBoxesH2[0].style.transform = "translateY(0px)";
-                 respoBoxesH2[0].style.opacity = 1;
-             }, 400);
+         /*
+                  if (fullHeight >= respoBoxesH2[0].offsetTop) {
+                      setTimeout(function () {
+                          respoBoxesH2[0].style.transform = "translateY(0px)";
+                          respoBoxesH2[0].style.opacity = 1;
+                      }, 400);
 
 
 
-             setTimeout(function () {
-                 respoBoxesP[0].style.transform = "translateY(0px)";
-                 respoBoxesP[0].style.opacity = 1;
-             }, 600);
-         }
+                      setTimeout(function () {
+                          respoBoxesP[0].style.transform = "translateY(0px)";
+                          respoBoxesP[0].style.opacity = 1;
+                      }, 600);
+                  }
 
-         if (fullHeight >= respoBoxesH2[1].offsetTop) {
-             setTimeout(function () {
-                 respoBoxesH2[1].style.transform = "translateY(0px)";
-                 respoBoxesH2[1].style.opacity = 1;
-             }, 400);
-
-
-
-             setTimeout(function () {
-                 respoBoxesP[1].style.transform = "translateY(0px)";
-                 respoBoxesP[1].style.opacity = 1;
-             }, 600);
-         }
-
-         if (fullHeight >= respoBoxesH2[2].offsetTop) {
-             setTimeout(function () {
-                 respoBoxesH2[2].style.transform = "translateY(0px)";
-                 respoBoxesH2[2].style.opacity = 1;
-             }, 400);
+                  if (fullHeight >= respoBoxesH2[1].offsetTop) {
+                      setTimeout(function () {
+                          respoBoxesH2[1].style.transform = "translateY(0px)";
+                          respoBoxesH2[1].style.opacity = 1;
+                      }, 400);
 
 
 
-             setTimeout(function () {
-                 respoBoxesP[2].style.transform = "translateY(0px)";
-                 respoBoxesP[2].style.opacity = 1;
-                 aBox.style.transform = "translateY(0px)";
-                 aBox.style.opacity = 1;
-             }, 600);
-         }
-*/
+                      setTimeout(function () {
+                          respoBoxesP[1].style.transform = "translateY(0px)";
+                          respoBoxesP[1].style.opacity = 1;
+                      }, 600);
+                  }
+
+                  if (fullHeight >= respoBoxesH2[2].offsetTop) {
+                      setTimeout(function () {
+                          respoBoxesH2[2].style.transform = "translateY(0px)";
+                          respoBoxesH2[2].style.opacity = 1;
+                      }, 400);
+
+
+
+                      setTimeout(function () {
+                          respoBoxesP[2].style.transform = "translateY(0px)";
+                          respoBoxesP[2].style.opacity = 1;
+                          aBox.style.transform = "translateY(0px)";
+                          aBox.style.opacity = 1;
+                      }, 600);
+                  }
+         */
          // PRESENTATION
-         
-         
-           if (fullHeight >= presentH2.offsetTop) {
-             setTimeout(function () {
-                 image[0].style.width = "84%";
-                 textSlide[0].style.transform = "translate(100%)";
-                  
 
-             }, 1300);
-               
-               setTimeout(function(){
-                 presentSpan[0].style.opacity=1;
-                 presentSpan[1].style.opacity=1;
-                 presentSpan[2].style.opacity=1;
-                   
-               },1600);
-               
-                  setTimeout(function(){
-               
-              textSlide[1].style.transform = "translate(100%)";
-                   textSlide[2].style.transform = "translate(100%)";
-                   textSlide[3].style.transform = "translate(100%)";
-         
-               },2100);
-               
-                   setTimeout(function(){
-                 presentH3[0].style.opacity=1;
-                 presentH3[1].style.opacity=1;
-         
-                   
-               },2400);
-               
-               
-           }
-         
-         
-           
-       
+
+         if (fullHeight >= presentH2.offsetTop) {
+             setTimeout(function () {
+                 image[0].style.width = "0%";
+                 textSlide[0].style.transform = "translate(100%)";
+
+
+             }, 1000);
+
+             setTimeout(function () {
+                 presentSpan[0].style.opacity = 1;
+                 presentSpan[1].style.opacity = 1;
+                 presentSpan[2].style.opacity = 1;
+
+             }, 1600);
+
+             setTimeout(function () {
+
+                 textSlide[1].style.transform = "translate(100%)";
+                 textSlide[2].style.transform = "translate(100%)";
+                 textSlide[3].style.transform = "translate(100%)";
+
+             }, 2100);
+
+             setTimeout(function () {
+                 presentH3[0].style.opacity = 1;
+                 presentH3[1].style.opacity = 1;
+
+
+             }, 2400);
+
+
+         }
+
+
+
+
 
          // ABOUT
 
@@ -374,6 +445,28 @@
          }
 
 
+         /*
+      
+                   if (fullHeight >= whiteHamburger[0].offsetTop) {
+             setTimeout(function () {
+                 for (var i = 0; i < 3; i++) {
+                     hamburger[i].style.backgroundColor="black";    
+                   
+                 }
+                 re
+             }, 1);
+         } else if(fullHeight >= blackHamburger[0].offsetTop || blackHamburger[1].offsetTop || blackHamburger[2].offsetTop){
+             for (var i = 0; i < 3; i++) {
+                  hamburger[i].style.backgroundColor="white"; 
+             }
+         }
+       
+     */
+         
+         
+         
+         
+         
      }, 100);
 
 
@@ -391,6 +484,10 @@
          loadingScreen.style.height = 0;
      }, 3400);
 
+
+     setTimeout(function () {
+         loadingScreen.style.height = 0;
+     }, 3400);
 
 
      // HOVER W OFFERS
@@ -442,12 +539,6 @@
          btn[0].style.transform = "translateY(0px)";
          btn[0].style.opacity = 1;
      }, 4700);
-
-
-
-
-
-
 
 
 
