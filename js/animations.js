@@ -153,9 +153,9 @@
      var heroTextH2 = document.getElementById("hero-text").querySelector("h2");
      var hrText = document.getElementById("hr-text");
      var btn = document.getElementsByClassName("button-show-more");
-     var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
-     var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
-     var aBox = document.getElementById("responsive-boxes-animate").querySelector("a");
+    // var respoBoxesH2 = document.getElementById("responsive-boxes-animate").querySelectorAll("h2");
+    // var respoBoxesP = document.getElementById("responsive-boxes-animate").querySelectorAll("p");
+     //var aBox = document.getElementById("responsive-boxes-animate").querySelector("a");
 
      // Zmienne about us
 
@@ -168,12 +168,16 @@
      var jobOffersH2 = document.getElementById("job-offers").querySelectorAll("h2");
      var jobOffersBtn = document.getElementById("job-offers").getElementsByClassName("button-offers");
      var jobOffersHover = document.getElementsByClassName("com-block");
+     var loadingScreen = document.getElementById("loading");
+     var loadingCube = document.getElementsByClassName("spinner");
+     var socialMedia = document.getElementsByClassName("social-media");
+     var image = document.getElementsByClassName("image");
+     var presentH2 = document.getElementById("presentation").querySelector("h2");
+    var textSlide = document.getElementsByClassName("animation-text-slide");
+     var presentSpan = document.querySelectorAll("span");
+   var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
 
 
-   
-     
-     
-     
 
      // Tutaj sa wszystkie animacje scrollowania
 
@@ -183,14 +187,14 @@
 
 
          // RESPONSYWNE 
-
+/*
          if (fullHeight >= respoBoxesH2[0].offsetTop) {
              setTimeout(function () {
                  respoBoxesH2[0].style.transform = "translateY(0px)";
                  respoBoxesH2[0].style.opacity = 1;
              }, 400);
 
-            
+
 
              setTimeout(function () {
                  respoBoxesP[0].style.transform = "translateY(0px)";
@@ -204,7 +208,7 @@
                  respoBoxesH2[1].style.opacity = 1;
              }, 400);
 
-          
+
 
              setTimeout(function () {
                  respoBoxesP[1].style.transform = "translateY(0px)";
@@ -218,7 +222,7 @@
                  respoBoxesH2[2].style.opacity = 1;
              }, 400);
 
-           
+
 
              setTimeout(function () {
                  respoBoxesP[2].style.transform = "translateY(0px)";
@@ -227,8 +231,46 @@
                  aBox.style.opacity = 1;
              }, 600);
          }
+*/
+         // PRESENTATION
+         
+         
+           if (fullHeight >= image[0].offsetTop) {
+             setTimeout(function () {
+                 image[0].style.width = "84%";
+                 textSlide[0].style.transform = "translate(100%)";
+                  
 
-
+             }, 1300);
+               
+               setTimeout(function(){
+                 presentSpan[0].style.opacity=1;
+                 presentSpan[1].style.opacity=1;
+                 presentSpan[2].style.opacity=1;
+                   
+               },1600);
+               
+                  setTimeout(function(){
+               
+              textSlide[1].style.transform = "translate(100%)";
+                   textSlide[2].style.transform = "translate(100%)";
+                   textSlide[3].style.transform = "translate(100%)";
+         
+               },2100);
+               
+                   setTimeout(function(){
+                 presentH3[0].style.opacity=1;
+                 presentH3[1].style.opacity=1;
+         
+                   
+               },2400);
+               
+               
+           }
+         
+         
+           
+       
 
          // ABOUT
 
@@ -241,57 +283,57 @@
                  aboutH1[0].style.transform = "translateY(0px)";
                  aboutH1[0].style.opacity = 1;
 
-             }, 500);
+             }, 800);
 
              setTimeout(function () {
                  aboutH2[0].style.transform = "translateY(0px)";
                  aboutH2[0].style.opacity = 1;
-             }, 600);
+             }, 900);
 
              setTimeout(function () {
                  aboutP[0].style.transform = "translateY(0px)";
                  aboutP[0].style.opacity = 1;
                  aboutBtn[0].style.transform = "translateY(0px)";
                  aboutBtn[0].style.opacity = 1;
-             }, 700);
+             }, 1000);
          }
 
          if (fullHeight >= aboutH1[1].offsetTop) {
              setTimeout(function () {
                  aboutH1[1].style.transform = "translateY(0px)";
                  aboutH1[1].style.opacity = 1;
-             }, 500);
+             }, 800);
 
              setTimeout(function () {
                  aboutH2[1].style.transform = "translateY(0px)";
                  aboutH2[1].style.opacity = 1;
-             }, 600);
+             }, 900);
 
              setTimeout(function () {
                  aboutP[1].style.transform = "translateY(0px)";
                  aboutP[1].style.opacity = 1;
                  aboutBtn[1].style.transform = "translateY(0px)";
                  aboutBtn[1].style.opacity = 1;
-             }, 700);
+             }, 1000);
          }
 
          if (fullHeight >= aboutH1[2].offsetTop) {
              setTimeout(function () {
                  aboutH1[2].style.transform = "translateY(0px)";
                  aboutH1[2].style.opacity = 1;
-             }, 500);
+             }, 800);
 
              setTimeout(function () {
                  aboutH2[2].style.transform = "translateY(0px)";
                  aboutH2[2].style.opacity = 1;
-             }, 600);
+             }, 900);
 
              setTimeout(function () {
                  aboutP[2].style.transform = "translateY(0px)";
                  aboutP[2].style.opacity = 1;
                  aboutBtn[2].style.transform = "translateY(0px)";
                  aboutBtn[2].style.opacity = 1;
-             }, 700);
+             }, 1000);
          }
 
 
@@ -302,7 +344,7 @@
          if (fullHeight >= jobOffersBlock.offsetTop) {
              setTimeout(function () {
                  jobOffersBlock.style.width = "0%"
-                 
+
              }, 400);
 
              setTimeout(function () {
@@ -317,18 +359,18 @@
                  jobOffersH2[1].style.opacity = 1;
                  jobOffersH2[0].style.transform = "translateY(0px)";
                  jobOffersH2[1].style.transform = "translateY(0px)";
-                
+
              }, 1700);
-             
-                  setTimeout(function () {
+
+             setTimeout(function () {
                  jobOffersBtn[0].style.transform = "translateY(0px)";
-                     jobOffersBtn[1].style.transform = "translateY(0px)";
-                          jobOffersBtn[0].style.opacity = 1;
-                     jobOffersBtn[1].style.opacity = 1;
-                  
-                
+                 jobOffersBtn[1].style.transform = "translateY(0px)";
+                 jobOffersBtn[0].style.opacity = 1;
+                 jobOffersBtn[1].style.opacity = 1;
+
+
              }, 1900)
-       
+
          }
 
 
@@ -337,49 +379,69 @@
 
 
 
-        setTimeout(function(){
-               if(jobOffersHover[0].className == "com-block"){
-                         jobOffersHover[0].className += " com-block-hover";
-                     }
-            
-                if(jobOffersHover[1].className == "com-block"){
-                         jobOffersHover[1].className += " com-block-hover";
-                     }
-                    
-        },2500);
-     
-     
+     // ANIMACJE BEZ SCROLLA 
+
+     //LOADING
+
+     setTimeout(function () {
+         loadingCube[0].style.opacity = 0;
+     }, 2600);
+
+     setTimeout(function () {
+         loadingScreen.style.height = 0;
+     }, 3400);
+
+
+
+     // HOVER W OFFERS
 
 
 
 
      setTimeout(function () {
+         if (jobOffersHover[0].className == "com-block") {
+             jobOffersHover[0].className += " com-block-hover";
+         }
+
+         if (jobOffersHover[1].className == "com-block") {
+             jobOffersHover[1].className += " com-block-hover";
+         }
+
+     }, 5000);
+
+
+
+     //ANIMACJE HERO
+
+
+     setTimeout(function () {
          rightPanel.style.opacity = 1;
          boxes.style.opacity = 1;
-     }, 500);
+         socialMedia[0].style.opacity = 1;
+     }, 4800);
 
 
-  
+
 
 
      setTimeout(function () {
          heroTextH1.style.transform = "translateY(0px)";
          heroTextH1.style.opacity = 1;
 
-     }, 1600);
+     }, 4600);
 
      setTimeout(function () {
          heroTextH2.style.transform = "translateY(0px)";
          heroTextH2.style.opacity = 1;
 
-     }, 1800);
+     }, 4800);
 
      setTimeout(function () {
          hrText.style.transform = "translateY(0px)";
          hrText.style.opacity = 1;
          btn[0].style.transform = "translateY(0px)";
          btn[0].style.opacity = 1;
-     }, 1700);
+     }, 4700);
 
 
 

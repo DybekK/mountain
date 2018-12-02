@@ -196,14 +196,14 @@
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  text-align: center;
+
 }
 
 .end-xs {
   -ms-flex-pack: end;
   -webkit-box-pack: end;
   justify-content: flex-end;
-  text-align: end;
+
 }
 
 .top-xs {
@@ -247,7 +247,13 @@
   order: 1;
 }
 
+
+
+
 @media only screen and (min-width: 48em) {
+    
+    
+    
   .container {
     width: 46rem;
   }
@@ -403,21 +409,21 @@
     -ms-flex-pack: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    text-align: start;
+
   }
 
   .center-sm {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
+
   }
 
   .end-sm {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    text-align: end;
+
   }
 
   .top-sm {
@@ -618,21 +624,21 @@
     -ms-flex-pack: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    text-align: start;
+
   }
 
   .center-md {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
+
   }
 
   .end-md {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    text-align: end;
+  
   }
 
   .top-md {
@@ -833,21 +839,21 @@
     -ms-flex-pack: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    text-align: start;
+ 
   }
 
   .center-lg {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
+
   }
 
   .end-lg {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    text-align: end;
+
   }
 
   .top-lg {

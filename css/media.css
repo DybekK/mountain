@@ -1,7 +1,17 @@
 ﻿@media only screen and (max-width: 1639px) {
 
 
-
+    #presentation h2{
+        font-size: 3em;
+    }
+    
+      #presentation h1{
+        font-size: 4.2em;
+    }
+    
+      #presentation h3{
+        font-size: 1em;
+    }
 
     #options div {
         font-size: 2em;
@@ -175,7 +185,9 @@
     }
 
     #hero-text h1 {
-        font-size: 5em;
+        font-size: 4.4em;
+
+        text-align: center;
     }
 
     #text-box-border {
@@ -215,14 +227,38 @@
     .box p {
         font-size: 0.8em;
     }
+}
 
-
-
-
+@media only screen and (max-width: 1158px){
+    
+    #presentation h2{
+        font-size: 2.5em;
+    }
+    
+      #presentation h1{
+        font-size: 3.3em;
+    }
+    
+      #presentation h3{
+        font-size: 1em;
+    }
 
 }
 
-@media only screen and (max-width: 991px) {
+
+@media only screen and (max-width: 995px) {
+
+    #presentation h2{
+        font-size: 2.2em;
+    }
+    
+      #presentation h1{
+        font-size: 3.1em;
+    }
+    
+      #presentation h3{
+        font-size: 1em;
+    }
 
 
     .container-text {
@@ -316,6 +352,25 @@
 
 @media only screen and (max-width: 922px) {
      
+    
+       #presentation h2{
+        font-size: 1.7em;
+    }
+    
+      #presentation h1{
+        font-size: 2.6em;
+    }
+    
+      #presentation h3{
+        font-size: 1em;
+    }
+    
+    
+    
+    .image{
+        height: 50vh !important;
+    }
+    
     
      #job-offers-animation{
         height: 30em;
@@ -440,16 +495,20 @@
 
 
     #hero-text h1 {
-        font-size: 4em !important;
+        font-size: 3em !important;
     }
 
     #hero-text h2 {
-        font-size: 2em !important;
+        font-size: 1.9em !important;
     }
 }
-
+@media only screen and (max-width: 47.9em){
+     .image{
+     display: none;
+    }
+}
 @media only screen and (max-width: 672px) {
-    
+   
     
       #job-offers{
         flex-direction: column;
@@ -559,6 +618,16 @@
     }
 }
 @media only screen and (max-width: 552px){
+    #hero h1{
+        font-size: 2.2em !important;
+    
+    }
+    
+    #hero h2{
+        font-size: 1.3em !important;
+      
+    }
+    
     
       #job-offers h1{
         font-size: 2em !important;
@@ -574,8 +643,30 @@
     }
     
 }
+
+
+@media only screen and (max-width: 461px){
+    #hero h2{
+       font-size: 1.1em !important;
+    }
+}
+
+
 @media only screen and (max-width: 414px) {
 
+    
+    
+    
+    
+        #hero h1{
+       font-size: 1.9em !important;
+    }
+
+        #hero h2{
+       font-size: 1em !important;
+    }
+    
+    
       #job-offers h1{
         font-size: 1.8em !important;
     }
@@ -652,8 +743,22 @@
     
 }
 
+@media only screen and (max-width: 390px){
+    
+    .present-text{
+        margin-left: 1em;
+    }
+}
+
+
 
 @media only screen and (max-width: 360px) {
+     .present-text{
+        margin-left: 2em;
+    }
+
+    
+    
     #job-offers h1{
         font-size: 1.4em !important;
     }
@@ -687,17 +792,23 @@
 
 
     #hero-text h1 {
-        font-size: 2.2em !important;
+        font-size: 1.8em !important;
     }
 
     #hero-text h2 {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
     }
 
 
 }
 
 @media only screen and (max-width: 322px) {
+    #presentation h2{
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    
     #hero-text button {
         margin-top: 1.8em;
         font-size: 1.2em;
@@ -718,7 +829,7 @@
 
 
     #hero-text h1 {
-        font-size: 1.9em !important;
+        font-size: 1.6em !important;
     }
 
     #hero-text .hr {
@@ -727,7 +838,7 @@
     }
 
     #hero-text h2 {
-        font-size: 1.2em !important;
+        font-size: 0.8em !important;
     }
 
 

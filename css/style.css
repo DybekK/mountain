@@ -6,9 +6,69 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Prompt', sans-serif;
+   font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
+
+
+#loading{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    transition: 1s;
+}
+
+
+.spinner {
+  width: 170px;
+  height: 170px;
+  transition: 1s;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+
+
 
 
 #job-offers{
@@ -129,7 +189,7 @@ font-size: 1.3em;
     padding: 7em 0;
     width: 100%;
     color: white;
-    background-color: #161616;
+    background-color: black;
 }
 
 .slider-image {
@@ -148,7 +208,7 @@ font-size: 1.3em;
 .about-us-text {
     display: flex;
     flex-direction: column;
-    margin: 4em 0;
+    margin: 10em 0;
 }
 
 #first-text:hover .button-click-blue::after {
@@ -183,7 +243,6 @@ font-size: 1.3em;
 .about-us-text h2 {
     font-size: 2em;
     width: 13em;
-    margin: 0.5em 0;
      transition: 0.5s;
     transform: translateY(-100px);
     opacity: 0;
@@ -192,7 +251,7 @@ font-size: 1.3em;
 .about-us-text p {
     font-size: 1.3em;
     width: 16em;
-    margin: 0.5em 0;
+    margin: 2em 0;
      transition: 0.5s;
     transform: translateY(-100px);
       opacity: 0;
@@ -200,7 +259,7 @@ font-size: 1.3em;
 
 .button-click {
    cursor: pointer;
-    margin: 3em 0 0 0;
+ 
     height: 3.2em;
     width: 3.2em;
     display: flex;
@@ -291,7 +350,7 @@ font-size: 1.3em;
 #hamburger {
     height: 36px;
     width: 50px;
-  
+    
     cursor: pointer;
     transition: 0.6s;
     padding: 0.5em;
@@ -329,7 +388,13 @@ p {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-image: url("../images/hero/hero.jpeg");
+
+    
+ 
+    
+    /*background-image: url("https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    */
+    background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -343,7 +408,6 @@ p {
     justify-content: center;
     color: white;
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.322);
-    margin-right: -4em;
     z-index: 2;
 }
 
@@ -370,12 +434,14 @@ p {
 }
 
 #hero-text h1 {
-    font-size: 7em;
+    font-size: 6em;
+    width: 12em;
+    text-align: right;
     margin-top: 2.1em;
     word-spacing: 0.08em;
     font-weight: bold;
     transform: translateY(-100px);
-    transition: .7s;
+    transition: 0.7s;
     opacity: 0;
 }
 
@@ -515,6 +581,7 @@ p {
     display: flex;
     width: 0;
     opacity: 0;
+     transition: 0.7s;
 }
 
 #options a:hover::after {
@@ -548,27 +615,9 @@ p {
     justify-content: flex-end;
     position: fixed;
     right: 0;
-    z-index: 2;
+    z-index: 10;
     margin-right: 0.4em;
 }
-
-
-
-
-
-
-.box h2::after {
-    content: " ";
-    border: 1px solid white;
-    display: flex;
-    width: 70%;
-    margin: 0.2em 0;
-}
-
-
-
-
-
 
 
 .limits-text {
@@ -609,6 +658,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: 1s;
 }
 
 
@@ -640,10 +691,10 @@ p {
 }
 
 .box {
+    margin: 2em 0;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    color: white;
 }
 
 
@@ -654,30 +705,103 @@ p {
 .box a {
     color: #4992B7;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 01em;
+}
+
+.responsive-boxes{
+    margin: 6em 0;
 }
 
 
+#presentation{
+    padding: 7em 0;
+}
 
-.box p {
+#presentation .image{
+    height: 100vh;
+    z-index: 2;
+    transition: 0.5s;
+    width: 0;
+    background-color: gray;
+}
+
+#presentation h2{
+margin: 1.4em 0;
+  font-size: 4em;
+}
+
+h2 .animation-text-slide{
+    position: absolute;
+    width: 700px;
+    
+    height: 70px;
+    transition: 1s;
+    background-color: white;
+} 
+
+h1 .animation-text-slide{
+    position: absolute;
+    width: 800px;
+    
+    height: 110px;
+    transition: 1s;
+    background-color: white;
+} 
+
+
+#presentation h1{
     margin: 0.5em 0;
+    font-size: 4.8em;
+        display: flex;
+   
+}
+#presentation h3{
+    font-size: 1.3em;
+    margin-bottom: 0.9em;
+    opacity: 0;
+    transition: 1s;
 }
 
-.first-box {
 
-    height: 6em;
+
+#presentation span{
+    opacity: 0;
+    z-index: 2;
+    transition: 1s;
+    font-size: 0.23em;
+    width: 2em;
+    margin-right:1em;
+    border-right: 1px solid black;
 }
 
-.second-box {
-    height: 8em;
 
+#presentation .a::after {
+    content: " ";
+    border: 1px solid black;
+    display: flex;
+    width: 0;
+    opacity: 0;
+     transition: 0.7s;
 }
 
-.third-box {
-    height: 10em;
-
+#presentation .a:hover::after {
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
 }
 
-.responsive-boxes {
-    display: none !important;
+.a{
+    width: 11em;
+}
+
+
+
+
+
+
+#presentation a{
+    width: 2em !important;
+    color: black;
+    font-size: 1.3em;
+    text-decoration: none;
 }
