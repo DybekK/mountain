@@ -517,7 +517,9 @@
       #job-offers-animation{
         height: 60em;
     }
-    
+    .about-us-text{
+        margin: 3.5em 0;
+    }
     
     .community{
         width: 100%;

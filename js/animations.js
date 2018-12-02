@@ -235,7 +235,7 @@
          // PRESENTATION
          
          
-           if (fullHeight >= image[0].offsetTop) {
+           if (fullHeight >= presentH2.offsetTop) {
              setTimeout(function () {
                  image[0].style.width = "84%";
                  textSlide[0].style.transform = "translate(100%)";
