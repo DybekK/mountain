@@ -6,7 +6,7 @@
  var menuOptions = document.getElementById("options").querySelectorAll("div");
  var body = document.body;
  var whiteHamburger = document.getElementsByClassName("white-hamburger");
-var blackHamburger = document.getElementsByClassName("black-hamburger");
+ var blackHamburger = document.getElementsByClassName("black-hamburger");
  var hamburger = btnOpen.querySelectorAll("div");
 
  var btn = document.getElementsByClassName("button-show-more");
@@ -27,7 +27,7 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
 
 
  // Zmienne about us
-
+ var about = document.getElementById("about-us");
  var aboutH1 = document.getElementById("text-column").querySelectorAll("h1");
  var aboutH2 = document.getElementById("text-column").querySelectorAll("h2");
  var aboutP = document.getElementById("text-column").querySelectorAll("p");
@@ -52,6 +52,11 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
  var textSlide = document.getElementsByClassName("animation-text-slide");
  var presentSpan = document.querySelectorAll("span");
  var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
+
+
+
+
+
 
 
 
@@ -251,9 +256,9 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
 
          //HAMBURGER
 
-   
 
-        
+
+
 
 
 
@@ -328,13 +333,14 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
                  textSlide[3].style.transform = "translate(100%)";
 
              }, 2100);
-
+        
+         
              setTimeout(function () {
                  presentH3[0].style.opacity = 1;
                  presentH3[1].style.opacity = 1;
 
 
-             }, 2400);
+             }, 2500);
 
 
          }
@@ -346,6 +352,15 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
          // ABOUT
 
 
+         if (fullHeight >= about.offsetTop) {
+
+             setTimeout(function () {
+                 backgroundMask.style.width = "44%";
+             }, 1100);
+
+
+
+         }
 
 
 
@@ -462,11 +477,11 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
          }
        
      */
-         
-         
-         
-         
-         
+
+
+
+
+
      }, 100);
 
 
@@ -543,3 +558,111 @@ var blackHamburger = document.getElementsByClassName("black-hamburger");
 
 
  });
+
+// scrollowanie
+
+ var colorSections = Array.prototype.slice.call(document.querySelectorAll('[data-color]'));
+ var backgroundColorArray = [];
+ var backgroundMask = document.getElementsByClassName("slider-image")[0];
+
+
+ var BackgroundColorController = function (elem, index, colorStart, colorEnd) {
+     this.elem = elem;
+     this.index = index;
+
+     this.transitionRange = colorSections[index - 1].clientHeight;
+
+     this.colorStart = colorStart;
+     this.colorEnd = colorEnd;
+     this.colorDif = {
+         r: this.colorStart.r - this.colorEnd.r,
+         g: this.colorStart.g - this.colorEnd.g,
+         b: this.colorStart.b - this.colorEnd.b
+     };
+
+     this.colorTransition = {
+         r: (this.colorDif.r === 0) ? 0 : Math.floor(this.transitionRange / this.colorDif.r),
+         g: (this.colorDif.g === 0) ? 0 : Math.floor(this.transitionRange / this.colorDif.g),
+         b: (this.colorDif.b === 0) ? 0 : Math.floor(this.transitionRange / this.colorDif.b)
+     };
+ };
+
+ BackgroundColorController.prototype.run = function () {
+     var boundingRectY = this.elem.getBoundingClientRect().top;
+
+     if (boundingRectY < this.transitionRange && boundingRectY > 0) {
+
+         var changeForR = (this.colorTransition.r === 0) ? 0 : Math.floor((this.transitionRange - boundingRectY) / this.colorTransition.r),
+             changeForG = (this.colorTransition.g === 0) ? 0 : Math.floor((this.transitionRange - boundingRectY) / this.colorTransition.g),
+             changeForB = (this.colorTransition.b === 0) ? 0 : Math.floor((this.transitionRange - boundingRectY) / this.colorTransition.b);
+
+         var r = this.colorStart.r - changeForR,
+             g = this.colorStart.g - changeForG,
+             b = this.colorStart.b - changeForB;
+
+         var colorChangeString = "rgb(" + r + ", " + g + ", " + b + ")";
+
+         backgroundMask.style.backgroundColor = colorChangeString;
+     }
+ };
+
+ colorSections.forEach(function (elem, index) {
+     if (index > 0) {
+         var colorStart = getSectionColorCode(colorSections[index - 1]);
+         var colorEnd = getSectionColorCode(colorSections[index]);
+         backgroundColorArray.push(new BackgroundColorController(elem, index, colorStart, colorEnd));
+     }
+ }, this);
+
+ function getSectionColorCode(sectionElem) {
+     var colorString = sectionElem.getAttribute('data-color');
+     var colorStringArray = colorString.split(',');
+     var colorNums = [];
+
+     colorStringArray.forEach(function (elem, index) {
+         colorNums.push(parseInt(elem));
+     }, this);
+
+     return {
+         r: colorNums[0],
+         g: colorNums[1],
+         b: colorNums[2]
+     };
+ }
+
+
+ setTimeout(function () {
+     document.addEventListener("scroll", function(){
+           backgroundColorArray.forEach(function (elem, index) {
+             elem.run();
+         }, this);
+
+     }); 
+ }, 500);
+ /*
+var blockContainer = document.getElementsByClassName("block-flex");
+var sticky = blockContainer[0].offsetTop;
+var block = document.getElementsByClassName("block");
+
+
+
+
+   document.addEventListener("scroll", function(){
+
+    var obj = blockContainer[0];
+    var topVal = parseInt(obj.style.left, 10);
+    obj.style.left = (topVal + 100) + "px";    
+
+
+
+
+
+}); 
+
+
+*/
+
+
+
+
+

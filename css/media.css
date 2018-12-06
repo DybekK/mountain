@@ -3,6 +3,7 @@
 
     #presentation h2{
         font-size: 2.6em;
+        margin-top: 0.5em;
     }
     
     
@@ -419,9 +420,6 @@
 }
 
 
-.slider-image {
-    width: 24em;
-}
 
 
 
