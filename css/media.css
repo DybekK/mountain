@@ -599,7 +599,14 @@ width: 51%;
 
     
     
-
+    .about-us-flex::after{
+        background-color: white;
+        
+    }
+     .about-us-flex::before{
+        background-color: white;
+        
+    }
     
  
     #slider-start{
