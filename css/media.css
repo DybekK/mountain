@@ -597,7 +597,14 @@ width: 51%;
 
 @media only screen and (max-width: 672px) {
 
+    
+    
 
+    
+ 
+    #slider-start{
+        display: none;
+    }
 
     .about-us-text {
         align-items: center;
