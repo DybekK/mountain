@@ -7,10 +7,12 @@
     }
     
     
-    #presentation {
-        margin: 2em 0;
-    }
+.animation-gallery-scroll{
+  transform: translateX(2%);
+  
+}
     
+
     
       #presentation h1{
         font-size: 3.3em;
@@ -549,9 +551,7 @@
         display: none;
     }
 
-    #text-column {
-        margin-left: 2em;
-    }
+
 
 
     .about-us-text h1 {
@@ -624,9 +624,7 @@
     }
 }
 @media only screen and (max-width: 552px){
-    #presentation {
-        margin: 2.4em 0 7em 0;
-    }
+
     
     
     #hero h1{
@@ -668,10 +666,35 @@
     }
 }
 @media only screen and (max-width: 414px) {
-
+    .about-us-text{
+        align-items: center;
+    }
+   
     
+    .slider-image-phone img{
+        height: 17em;
+        position: relative;
+        z-index: 2;
+    }
     
+    .slider-image-phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         margin-bottom: 6em;
+    }
     
+    .slider-image-phone div{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 21em;
+        padding: 1em 0;
+        background-color: red;
+    }
+    
+   
+ 
     
         #hero h1{
        font-size: 1.9em !important;

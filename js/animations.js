@@ -32,7 +32,7 @@
  var aboutH2 = document.getElementById("text-column").querySelectorAll("h2");
  var aboutP = document.getElementById("text-column").querySelectorAll("p");
  var aboutBtn = document.getElementById("text-column").getElementsByClassName("button-click");
-
+ var sliderStart = document.getElementById("slider-start");
  // Zmienne job
 
  var jobOffersBlock = document.getElementById("job-offers-animation");
@@ -48,11 +48,10 @@
 
  //zmienne presentation
  var image = document.getElementsByClassName("image-in");
- var presentH2 = document.getElementById("presentation").querySelector("h2");
+
  var textSlide = document.getElementsByClassName("animation-text-slide");
  var presentSpan = document.querySelectorAll("span");
  var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
-
 
 
 
@@ -134,7 +133,7 @@
          sectionMenu.style.opacity = 1;
      }, 50);
 
-     for (var i = 0; i < 4; i++) {
+     for (var i = 0; i < 5; i++) {
 
          if (i == 0) {
              setTimeout(function () {
@@ -158,8 +157,13 @@
                  menuOptions[3].style.transform = "translateY(0px)";
              }, 1000);
 
-         }
+         } else if (i == 4) {
+             setTimeout(function () {
+                 menuOptions[4].style.opacity = 1;
+                 menuOptions[4].style.transform = "translateY(0px)";
+             }, 950);
 
+         }
      }
 
 
@@ -186,7 +190,7 @@
 
      }, 100);
 
-     for (var i = 0; i < 4; i++) {
+     for (var i = 0; i < 5; i++) {
 
          if (i == 0) {
              setTimeout(function () {
@@ -210,8 +214,13 @@
                  menuOptions[3].style.transform = "translateY(100px)";
              }, 950);
 
-         }
+         } else if (i == 4) {
+             setTimeout(function () {
+                 menuOptions[4].style.opacity = 0;
+                 menuOptions[4].style.transform = "translateY(100px)";
+             }, 1000);
 
+         }
 
      }
 
@@ -252,6 +261,7 @@
      // Tutaj sa wszystkie animacje scrollowania
 
      setInterval(function () {
+
          var fullHeight = window.pageYOffset + window.innerHeight;
 
          //HAMBURGER
@@ -311,20 +321,20 @@
          // PRESENTATION
 
 
-         if (fullHeight >= presentH2.offsetTop) {
+         if (fullHeight >= sliderStart.offsetTop) {
              setTimeout(function () {
                  image[0].style.width = "0%";
                  textSlide[0].style.transform = "translate(100%)";
 
 
-             }, 1000);
+             }, 500);
 
              setTimeout(function () {
                  presentSpan[0].style.opacity = 1;
                  presentSpan[1].style.opacity = 1;
                  presentSpan[2].style.opacity = 1;
 
-             }, 1600);
+             }, 1100);
 
              setTimeout(function () {
 
@@ -332,15 +342,15 @@
                  textSlide[2].style.transform = "translate(100%)";
                  textSlide[3].style.transform = "translate(100%)";
 
-             }, 2100);
-        
-         
+             }, 1600);
+
+
              setTimeout(function () {
                  presentH3[0].style.opacity = 1;
                  presentH3[1].style.opacity = 1;
 
 
-             }, 2500);
+             }, 2000);
 
 
          }
@@ -358,10 +368,19 @@
                  backgroundMask.style.width = "44%";
              }, 1100);
 
-
-
          }
 
+
+         if (window.pageYOffset >= sliderStart.offsetTop) {
+             document.getElementsByClassName("animation-gallery-scroll")[0].style.top = 50 + "px";
+             document.getElementsByClassName("transition-box")[0].style.opacity = 1;
+         } else {
+             document.getElementsByClassName("transition-box")[0].style.opacity = 0;
+         }
+
+         if (window.pageYOffset >= aboutP[3].offsetTop) {
+             document.getElementsByClassName("transition-box")[0].style.opacity = 0;
+         }
 
 
          if (fullHeight >= aboutH1[0].offsetTop) {
@@ -421,6 +440,25 @@
                  aboutBtn[2].style.opacity = 1;
              }, 1000);
          }
+         if (fullHeight >= aboutH1[3].offsetTop) {
+             setTimeout(function () {
+                 aboutH1[3].style.transform = "translateY(0px)";
+                 aboutH1[3].style.opacity = 1;
+             }, 800);
+
+             setTimeout(function () {
+                 aboutH2[3].style.transform = "translateY(0px)";
+                 aboutH2[3].style.opacity = 1;
+             }, 900);
+
+             setTimeout(function () {
+                 aboutP[3].style.transform = "translateY(0px)";
+                 aboutP[3].style.opacity = 1;
+                 aboutBtn[3].style.transform = "translateY(0px)";
+                 aboutBtn[3].style.opacity = 1;
+             }, 1000);
+         }
+
 
 
 
@@ -559,7 +597,7 @@
 
  });
 
-// scrollowanie
+ // scrollowanie
 
  var colorSections = Array.prototype.slice.call(document.querySelectorAll('[data-color]'));
  var backgroundColorArray = [];
@@ -632,12 +670,12 @@
 
 
  setTimeout(function () {
-     document.addEventListener("scroll", function(){
-           backgroundColorArray.forEach(function (elem, index) {
+     document.addEventListener("scroll", function () {
+         backgroundColorArray.forEach(function (elem, index) {
              elem.run();
          }, this);
 
-     }); 
+     });
  }, 500);
  /*
 var blockContainer = document.getElementsByClassName("block-flex");
@@ -654,15 +692,38 @@ var block = document.getElementsByClassName("block");
     obj.style.left = (topVal + 100) + "px";    
 
 
-
-
-
 }); 
-
 
 */
 
+ var scrollPos = 0;
+ var pos = 0;
+
+
+
+ window.addEventListener("scroll", function () {
+
+     //console.log("1:" + scrollPos);
+     //console.log("2:" + document.body.getBoundingClientRect().top);
+
+
+
+     if (document.body.getBoundingClientRect().top > scrollPos) {
+         //UP
+         pos = backgroundMask.getBoundingClientRect().top - scrollPos;
+         document.getElementsByClassName("animation-gallery-scroll")[0].style.left = pos + "px";
+         console.log(pos);
+     } else {
+         //DOWN
+         pos = backgroundMask.getBoundingClientRect().top + scrollPos;
+         document.getElementsByClassName("animation-gallery-scroll")[0].style.left = pos + "px";
+         console.log(pos);
+     }
 
 
 
 
+
+
+
+ });

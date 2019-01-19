@@ -1,9 +1,9 @@
-﻿
+﻿/*
 html {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
+*/
 #overflow {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -24,6 +24,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+.animation-gallery-scroll{
+    display: flex;
+   position: fixed;
+   transform: translateX(7%);
+}
+
+.transition-box{
+        transition: 0.7s;
+     opacity: 0;
+}
+.gallery-box{
+    margin: 0 10em;
+}
+.gallery-box img{
+    height: 450px;
+}
+
+.slider-image {
+    width: 0;
+    transition: 0.8s;
+    background-color: rgb(8, 133, 200);
 
 }
 
@@ -101,6 +124,8 @@ body {
 
 
 #job-offers {
+ position: relative;
+      z-index: 5;
     display: flex;
     color: white;
 }
@@ -217,7 +242,7 @@ body {
 
 
 #about-us {
-    padding: 7em 0;
+    
     width: 100%;
     color: white;
     background-color: black;
@@ -228,37 +253,37 @@ body {
 
 
 
-.block-flex{
+.block-flex {
     display: flex;
     position: fixed;
     top: 0;
 }
 
 
-.block{
+.block {
     height: 400px;
     width: 400px;
     background-color: red;
     margin: 0 10em;
 }
 
-.marker{
-    height: 33.333333%;
+.marker {
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
 }
-.slider-image {
-    width: 0;
-    transition: 0.8s;
- background-color: rgb(8,133,200);
-}
+
+
+
+
 
 .about-us-flex {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    
 }
 
 .about-us-text {
@@ -267,6 +292,32 @@ body {
     margin: 10em 0;
     z-index: 2;
 }
+
+.about-us-flex::before{
+   content: " ";
+z-index: 1;
+position: absolute;
+    left: 0;
+    height:67%;
+    width: 9%;
+    background-color: black;
+}
+
+.slider-image-phone{
+    display: none;
+}
+
+
+.about-us-flex::after{
+   content: " ";
+
+position: absolute;
+    right: 0;
+     height:67%;
+    width: 50%;
+    background-color: black;
+}
+
 
 #first-text:hover .button-click-blue::after {
     border: 7px solid #023A68;
@@ -282,7 +333,15 @@ body {
     transition: 0.4s;
 }
 
-#third-text:hover .button-click-orange::after {
+
+#third-text:hover .button-click-purple::after{
+    border: 7px solid #3a1a56;
+    height: 3em;
+    width: 3em;
+    transition: 0.4s; 
+}
+
+#fourth-text:hover .button-click-orange::after {
     border: 7px solid #99560A;
     height: 3em;
     width: 3em;
@@ -332,7 +391,7 @@ body {
     position: absolute;
     width: 100%;
     height: 40em;
-    z-index: 2;
+    z-index: 4;
     right: 0;
     background-color: white;
     transition: 0.8s;
@@ -358,6 +417,17 @@ body {
 
     background-color: #0C62A8;
 }
+
+.button-click-purple {
+
+    background-color: #6C23AA;
+}
+
+.button-click-purple::after {
+    transition: 0.4s;
+    border: 3px solid #5e2291;
+}
+
 
 .button-click-blue::after {
     transition: 0.4s;
@@ -447,7 +517,8 @@ p {
 
     /*background-image: url("https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     */
-    background-color: black;
+    background-image: url(" https://www.deepin.com.pl/wp-content/uploads/2018/05/Flower_in_Dark_by_Ameen_Fahmy.jpg");
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -497,7 +568,7 @@ p {
 }
 
 #hero-text button {
-   
+
     cursor: pointer;
     border: 4px solid white;
     background-color: transparent;
@@ -510,7 +581,7 @@ p {
     opacity: 0;
     transition: 0.7s;
     margin-top: 1.3em;
-    
+
 }
 
 
@@ -547,7 +618,7 @@ p {
     width: 0%;
     transition: 0.5s;
     background-color: white;
-    z-index: 5;
+    z-index: 50;
     display: none;
     align-items: center;
     justify-content: space-between;
@@ -618,7 +689,7 @@ p {
 #options a::after {
     content: " ";
     border: 1px solid black;
-       background-color: black;
+    background-color: black;
     display: flex;
     width: 0;
     opacity: 0;
@@ -775,7 +846,6 @@ p {
 #presentation h2 {
     margin-bottom: 1em;
     font-size: 3.6em;
-    margin-top: 2.1em;
 }
 
 h2 .animation-text-slide {
@@ -792,7 +862,7 @@ h1 .animation-text-slide {
     width: auto;
     width: 1000px;
     height: 110px;
-    transition:1s;
+    transition: 1s;
     background-color: white;
 }
 
@@ -813,8 +883,13 @@ h1 .animation-text-slide {
 }
 
 #presentation {
+      position: relative;
+    z-index: 5;
+background-color: #fff;
+ 
+}
 
-    transition: 1s;
+#presentation .row{
     height: 100vh;
 }
 
