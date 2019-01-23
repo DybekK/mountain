@@ -310,6 +310,15 @@ width: 51%;
 @media only screen and (max-width: 995px) {
     
     
+    #what-thinks .opinion .opinion-text {
+    font-size: 1.6em;
+}
+    
+    #what-thinks .name {
+font-size: 1.2em;
+}
+    
+    
     
         .animation-gallery-scroll {
         transform: translateX(1%);
@@ -589,8 +598,18 @@ width: 51%;
     }
 }
 
-@media only screen and (max-width: 47.9em) {
-    .image {
+@media only screen and (max-width: 767px){
+    
+        #what-thinks .opinion .opinion-text {
+    font-size: 1.2em;
+}
+    
+    #what-thinks .name {
+font-size: 1.2em;
+}
+    
+    
+     .image {
         display: none;
     }
 }
@@ -780,6 +799,33 @@ width: 51%;
 
 
 @media only screen and (max-width: 461px) {
+    
+    
+    
+    
+     .what-thinks{
+        padding-left: 2rem;
+    padding-right: 2rem;
+    }
+    
+    .slider-buttons{
+        padding-left: 2rem;
+    }
+    
+    #slide-counter{
+        padding-left: 2rem;
+    }
+    
+    
+        #what-thinks .opinion .opinion-text {
+    font-size: 1.15em;
+}
+    
+    #what-thinks .name {
+font-size: 1em;
+}
+    
+    
     #hero h2 {
         font-size: 1.1em !important;
     }
@@ -803,7 +849,14 @@ width: 51%;
 @media only screen and (max-width: 414px) {
 
 
-
+    #what-thinks .opinion .opinion-text {
+    font-size: 1em;
+}
+    
+    #what-thinks .name {
+font-size: 1em;
+}
+    
 
     #hero h1 {
         font-size: 1.9em !important;
@@ -890,7 +943,30 @@ width: 51%;
 
 }
 
-@media only screen and (max-width: 390px) {}
+@media only screen and (max-width: 390px) {
+    
+    
+        
+   
+    
+    .slider-buttons{
+        padding-left: 1.6rem;
+    }
+    
+    #slide-counter{
+        padding-left: 1.6rem;
+    }
+    
+    
+    
+         .what-thinks{
+        padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    }
+    
+
+    
+}
 
 
 

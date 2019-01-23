@@ -36,6 +36,7 @@
  // Zmienne job
 
  var jobOffersBlock = document.getElementById("job-offers-animation");
+ var jobOffers = document.getElementById("job-offers");
  var jobOffersH1 = document.getElementById("job-offers").querySelectorAll("h1");
  var jobOffersH2 = document.getElementById("job-offers").querySelectorAll("h2");
  var jobOffersBtn = document.getElementById("job-offers").getElementsByClassName("button-offers");
@@ -48,13 +49,15 @@
 
  //zmienne presentation
  var image = document.getElementsByClassName("image-in");
-
  var textSlide = document.getElementsByClassName("animation-text-slide");
  var presentSpan = document.querySelectorAll("span");
+ var presentation = document.getElementById("presentation");
+ var presentH2 = document.getElementById("presentation").querySelector("h2");
  var presentH3 = document.getElementById("presentation").querySelectorAll("h3");
-
-
-
+ var sliderAnimationStart = document.getElementById("what-thinks");
+ var slideCounter = document.getElementById("slide-counter");
+ var slideText = document.getElementById("what-thinks-animation");
+ var slideButtons = document.getElementsByClassName("slider-buttons")[0];
 
 
 
@@ -321,7 +324,7 @@
          // PRESENTATION
 
 
-         if (fullHeight >= sliderStart.offsetTop) {
+         if (fullHeight >= presentation.offsetTop) {
              setTimeout(function () {
                  image[0].style.width = "0%";
                  textSlide[0].style.transform = "translate(100%)";
@@ -351,6 +354,35 @@
 
 
              }, 2000);
+
+
+         }
+
+
+
+         // SLIDER SCROLL 
+
+         if (fullHeight >= sliderAnimationStart.offsetTop) {
+             setTimeout(function () {
+                 slideCounter.style.opacity = 1;
+                 slideCounter.style.transform = "translate(0px)";
+             }, 500);
+
+             setTimeout(function () {
+                 slideText.style.opacity = 1;
+                 slideText.style.transform = "translate(0px)";
+             }, 900);
+
+             setTimeout(function () {
+                 slideButtons.style.opacity = 1;
+                 slideButtons.style.transform = "translate(0px)";
+             }, 1300);
+
+
+
+
+
+
 
 
          }
@@ -465,7 +497,7 @@
          // JOB-OFFERS
 
 
-         if (fullHeight >= jobOffersBlock.offsetTop) {
+         if (fullHeight >= jobOffers.offsetTop) {
              setTimeout(function () {
                  jobOffersBlock.style.width = "0%"
 
@@ -677,28 +709,9 @@
 
      });
  }, 500);
- /*
-var blockContainer = document.getElementsByClassName("block-flex");
-var sticky = blockContainer[0].offsetTop;
-var block = document.getElementsByClassName("block");
 
 
-
-
-   document.addEventListener("scroll", function(){
-
-    var obj = blockContainer[0];
-    var topVal = parseInt(obj.style.left, 10);
-    obj.style.left = (topVal + 100) + "px";    
-
-
-}); 
-
-*/
-
- var scrollPos = 0;
- var pos = 0;
-
+ //ANIMACJA PRZESUWANIA OBRAZKOW W SCROLLU
 
 
  window.addEventListener("scroll", function () {
@@ -706,6 +719,8 @@ var block = document.getElementsByClassName("block");
      //console.log("1:" + scrollPos);
      //console.log("2:" + document.body.getBoundingClientRect().top);
 
+     var scrollPos = 0;
+     var pos = 0;
 
 
      if (document.body.getBoundingClientRect().top > scrollPos) {
@@ -719,11 +734,67 @@ var block = document.getElementsByClassName("block");
          document.getElementsByClassName("animation-gallery-scroll")[0].style.left = pos + "px";
          console.log(pos);
      }
-
-
-
-
-
-
-
  });
+
+
+ //SLIDER
+
+ var slideIndex = 1;
+ var previousSlide = document.getElementById("previous-slide");
+ var nextSlide = document.getElementById("next-slide");
+ var slideNumber = 1;
+ var firstNumber = document.getElementById("slide-counter").querySelectorAll("p")[0];
+
+ showDivs(slideIndex);
+
+
+
+ previousSlide.addEventListener("click", function () {
+     showDivs(slideIndex -= 1)
+ });
+
+ nextSlide.addEventListener("click", function () {
+     showDivs(slideIndex += 1)
+ });
+/*
+sliderAnimationStart.addEventListener("touchmove", function(event){
+    var firstTouch = event.touches[0].clientX;
+});
+*/
+
+
+
+ function showDivs(n) {
+     var x = document.getElementsByClassName("what-thinks");
+     firstNumber.style.opacity = "0";
+     if (n > x.length) {
+         slideIndex = 1;
+         slideNumber = 1;
+     }
+     if (n < 1) {
+         slideIndex = x.length;
+         slideNumber = x.length;
+     }
+     for (let i = 0; i < x.length; i++) {
+         setTimeout(function () {
+             x[i].style.opacity = 0;
+             x[i].style.position = "absolute";
+         }, 500);
+     }
+     setTimeout(function () {
+         x[slideIndex - 1].style.position = "relative";
+     }, 500);
+
+     setTimeout(function () {
+         x[slideIndex - 1].style.opacity = 1;
+     }, 1300);
+
+
+     setTimeout(function () {
+         firstNumber.innerHTML = slideIndex;
+         firstNumber.style.opacity = "1";
+     }, 1300);
+
+
+
+ }
